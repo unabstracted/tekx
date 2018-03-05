@@ -453,7 +453,7 @@ If prompted, select **Always open these types of links in the associated app** a
 
 .. note:: This may appear slightly different depending on your browser (Chrome shown). You want to allow your browser to open the Citrix Receiver application.
 
-Refresh your browser and log in to StoreFront as **POCLAB\\basicuser01**
+Refresh your browser and log in to StoreFront as **NTNXLAB\\basicuser01**
 
   .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/25b.png
 
@@ -574,7 +574,7 @@ Connecting to the Desktop
 
 Open \http://<*XD-VM-IP*>/Citrix/StoreWeb in a browser on the same L3 LAN as your XD VM.
 
-Log in as **POCLAB\\devuser01**.
+Log in as **NTNXLAB\\devuser01**.
 
 Select the **Desktops** tab and click your **Personal Windows 10 Desktop** to launch the session.
 

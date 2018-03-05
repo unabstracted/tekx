@@ -136,7 +136,7 @@ In **Prism > File Server > Share > home**, click **+ Add Quota Policy**. Fill ou
 
 Open \http://<*XD-VM-IP*>/Citrix/StoreWeb in a browser on the same L3 LAN as your XD VM.
 
-Log in as **POCLAB\\devuser01**.
+Log in as **NTNXLAB\\devuser01**.
 
 Select the **Desktops** tab and click your **Personal Windows 10 Desktop** to launch the session.
 
@@ -152,7 +152,7 @@ After ~2 hours, validate the presense of **Self Service Restore Snapshots** in *
 
   .. figure:: http://s3.nutanixworkshops.com/ts18/afs/21a.png
 
-From **POCLAB\\devuser01's Personal Windows 10 Desktop** session, browse to your home directory. Open, modify, and save a text file. Right-click that file and select **Restore previous versions**. Open a previous version of the document corresponding to AFS snapshots and save as a new file.
+From **NTNXLAB\\devuser01's Personal Windows 10 Desktop** session, browse to your home directory. Open, modify, and save a text file. Right-click that file and select **Restore previous versions**. Open a previous version of the document corresponding to AFS snapshots and save as a new file.
 
   .. figure:: http://s3.nutanixworkshops.com/ts18/afs/21b.png
 
