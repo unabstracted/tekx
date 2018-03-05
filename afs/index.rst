@@ -21,7 +21,7 @@ The AFS 3.0.0 package has been already been uploaded and the Data Services IP ha
 Fill out the following fields and click **Next**:
 
   - **Name** - AFS
-  - **Domain** - poclab.local
+  - **Domain** - ntnxlab.local
   - **File Server Size** - 1 TiB
 
   .. figure:: http://s3.nutanixworkshops.com/ts18/afs/8b.png
@@ -51,7 +51,7 @@ Fill out the following fields and click **Next**:
 
   .. figure:: http://s3.nutanixworkshops.com/ts18/afs/11b.png
 
-.. note:: Similar to NFSv3, in Unmanaged mode, users are only identified by UID/GID.
+.. note:: Similar to NFSv3, in Unmanaged mode, users are only identified by UID/GID. NFS connections will still require an NFSv4 capable client.
 
 Review the configuration and click **Create**.
 
@@ -82,7 +82,7 @@ Select **Enable Access Based Enumeration** and **Self Service Restore** and clic
 
   .. figure:: http://s3.nutanixworkshops.com/ts18/afs/15.png
 
-In the **XD** VM console, open ``\\AFS.poclab.local`` in **File Explorer**.
+In the **XD** VM console, open ``\\AFS.ntnxlab.local`` in **File Explorer**.
 
 Right-click **home > Properties**.
 
@@ -98,7 +98,7 @@ Click **Add**.
 
 Click **Select a principal** and specify **Everyone** in the **Object Name** field. Click **OK**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab7/21.png
+  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab7/21b.png
 
 Fill out the following fields and click **OK**:
 
@@ -117,15 +117,11 @@ Click **OK > OK > OK**.
 
 In the **XD** VM console, open **Control Panel > Administrative Tools > Active Directory Users & Computers**.
 
-Right-click **Active Directory Users & Computers > Change Domain Controller**. Select **dc1.poblab.local** and click **OK**.
-
-  .. figure:: http://s3.nutanixworkshops.com/ts18/afs/16.png
-
-Under **poclab.local > Users**, right-click **devuser01 > Properties**.
+Under **ntnxlab.local > Users**, right-click **devuser01 > Properties**.
 
   .. figure:: http://s3.nutanixworkshops.com/ts18/afs/17.png
 
-Click **Profile**. Under **Home folder**, select **Connect** and specify ``\\afs.poclab.local\home\%username%`` as the path. Click **OK**. Repeat for the following user accounts: **devuser02**, **devuser03**, **devuser04**.
+Click **Profile**. Under **Home folder**, select **Connect** and specify ``\\afs.ntnxlab.local\home\%username%`` as the path. Click **OK**. Repeat for the following user accounts: **devuser02**, **devuser03**, **devuser04**.
 
   .. figure:: http://s3.nutanixworkshops.com/ts18/afs/18.png
 
@@ -150,7 +146,7 @@ Open ``Z:\`` in **File Explorer** and create multiple files, with at least one p
 
   .. figure:: http://s3.nutanixworkshops.com/ts18/afs/19.png
 
-Open ``\\afs.poclab.local\home`` and observe your **%username%** directory is the only directory visible. Disable **Access Based Enumeration (ABE)** in **Prism > File Server > Share > home > Update** and try again.
+Open ``\\afs.ntnxlab.local\home`` and observe your **%username%** directory is the only directory visible. Disable **Access Based Enumeration (ABE)** in **Prism > File Server > Share > home > Update** and try again.
 
 After ~2 hours, validate the presense of **Self Service Restore Snapshots** in **Prism > File Server > Share > home**.
 
@@ -175,7 +171,7 @@ Fill out the following fields and click **Create**:
 
   - **Authentication** - System
   - **Default Access** - No Access
-  - **Clients with Read-Write Access** - *Cluster IP Range* (10.21.75.*)
+  - **Clients with Read-Write Access** - *Cluster IP Range* (10.21.XX.*)
 
   .. figure:: http://s3.nutanixworkshops.com/ts18/afs/23.png
 
@@ -210,7 +206,7 @@ Execute the following:
 
     yum -y install nfs-utils
     mkdir /afsmnt
-    mount.nfs4 afs.poclab.local:/ /afsmnt
+    mount.nfs4 afs.ntnxlab.local:/ /afsmnt
     df -kh
     ls /afsmnt
 
@@ -222,7 +218,7 @@ Reboot the VM and observe the export is no longer mounted. To persist the mount,
 
   .. code-block:: bash
 
-    echo 'afs.poclab.local:/ /afsmnt nfs4' >> /etc/fstab
+    echo 'afs.ntnxlab.local:/ /afsmnt nfs4' >> /etc/fstab
 
 The following command will add 2000 2MB files filled with random data to ``/afsmnt/logs``:
 

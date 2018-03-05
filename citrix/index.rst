@@ -65,7 +65,7 @@ Fill out the following fields to configure the connection to your AHV cluster an
   - **Connection Name** - *A friendly name for the connection, such as your Nutanix cluster name*
   - **Create virtual machines using** - Studio tools (Machine Creation Services)
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab3/21.png
+  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab3/21b.png
 
 .. note::
 
@@ -73,7 +73,7 @@ Fill out the following fields to configure the connection to your AHV cluster an
 
 Specify a name for the network and storage resources for the cluster (e.g. the Nutanix cluster name), and select the IPAM enabled **Secondary** network. This will be the DHCP pool used by provisioned desktops and XenApp servers.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab3/22.png
+  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab3/22b.png
 
 The workshop will not explore Citrix's AppDNA or App-V Publishing features, so both can be left unselected. Click **Next**.
 
@@ -81,7 +81,7 @@ The workshop will not explore Citrix's AppDNA or App-V Publishing features, so b
 
 Review selections and click **Finish** to start site creation.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab3/24.png
+  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab3/24b.png
 
 Once complete, Studio will indicate that configuration was successful. The process takes approximately 3 minutes.
 
@@ -93,7 +93,7 @@ Selecting the **PowerShell** tab will detail all the steps taken by the Site Cre
 
 Select **Citrix StoreFront > Stores** and review the configuration.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab3/27.png
+  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab3/27b.png
 
 Creating the Gold Image
 +++++++++++++++++++++++
@@ -304,11 +304,11 @@ Select **Random** and click **Next**.
 
 Select your Nutanix storage container and click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/6.png
+  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/6b.png
 
 Select your **W10-Gold** snapshot and click **Next**. These snapshots will continue to exist as long as there are provisioned virtual desktops utilizing them.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/7.png
+  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/7b.png
 
 Fill out the following fields and click **Next**:
 
@@ -319,7 +319,7 @@ Fill out the following fields and click **Next**:
 
   .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/8.png
 
-Select **Create new Active Directory accounts**. Under the **POCLAB.local** domain, select the **Default OU** OU. Specify **W10NP-###** as the **Account naming scheme**. Click **Next**.
+Select **Create new Active Directory accounts**. Under the **NTNXLAB.local** domain, select the **Default OU** OU. Specify **W10NP-###** as the **Account naming scheme**. Click **Next**.
 
   .. figure:: http://s3.nutanixworkshops.com/ts18/citrix/lab6/9b.png
 
@@ -398,13 +398,13 @@ Click **Add** and fill out the following fields:
 
   .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/20.png
 
-Click **OK > Next**
+Click **OK > Next**.
 
   .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/21.png
 
 Specify a friendly name for the Delivery Group and click **Finish**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/22.png
+  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/22b.png
 
 Following creation of the pool, observe in **Prism** that 1 of the **W10P-###** VMs been has powered on.
 
@@ -455,11 +455,13 @@ If prompted, select **Always open these types of links in the associated app** a
 
 Refresh your browser and log in to StoreFront as **POCLAB\\basicuser01**
 
+  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/25b.png
+
 .. note:: If you're still being prompted to detect Citrix Receiver, click **Already installed** to proceed to the login page.
 
 Select the **Desktops** tab and observe your **Pooled Windows 10 Desktop** is available. Click the **Pooled** desktop to launch the session.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/26.png
+  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/26b.png
 
 After the virtual desktop has completed logging in, experiment by changing application settings, installing applications, restarting the VM, and logging in again.
 
@@ -493,11 +495,11 @@ Select **Static** and **Yes, create a dedicated virtual machine**. Click **Next*
 
 Select your Nutanix storage container and click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/6.png
+  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/6b.png
 
 Select your **W10-Gold** snapshot and click **Next**. Note the XDSNAP* snapshot listed from the Preparation VM created by the non-persistent Machine Catalog previously.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/7.png
+  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/7b.png
 
 Fill out the following fields and click **Next**:
 
@@ -508,7 +510,7 @@ Fill out the following fields and click **Next**:
 
   .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/8.png
 
-Select **Create new Active Directory accounts**. Under the **POCLAB.local** domain, select the **Default OU** OU. Specify *W10P-###* as the **Account naming scheme**. Click **Next**.
+Select **Create new Active Directory accounts**. Under the **NTNXLAB.local** domain, select the **Default OU** OU. Specify *W10P-###* as the **Account naming scheme**. Click **Next**.
 
   .. figure:: http://s3.nutanixworkshops.com/ts18/citrix/lab5/9b.png
 
@@ -557,13 +559,13 @@ Click **Add** and fill out the following fields:
 
   .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/23.png
 
-Click **OK > Next**
+Click **OK > Next**.
 
   .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/24.png
 
 Specify a friendly name for the Delivery Group and click **Finish**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/25.png
+  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/25b.png
 
 Following creation of the pool, observe in **Prism** that 1 of the **W10P-###** VMs been has powered on.
 
@@ -572,7 +574,7 @@ Connecting to the Desktop
 
 Open \http://<*XD-VM-IP*>/Citrix/StoreWeb in a browser on the same L3 LAN as your XD VM.
 
-Log in as **POCLAB\devuser01**.
+Log in as **POCLAB\\devuser01**.
 
 Select the **Desktops** tab and click your **Personal Windows 10 Desktop** to launch the session.
 
