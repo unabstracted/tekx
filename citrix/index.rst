@@ -69,7 +69,7 @@ Fill out the following fields to configure the connection to your AHV cluster an
 
 .. note::
 
-  The **xd** account has already been created for you and can be seen in **Prism > ** :fa:`cog` **> Local User Management**. The account requires the **Cluster Admin** role.
+  The local Prism account **xd** has already been created for you. To function, the Prism service account used for the connection requires the **Cluster Admin** role.
 
 Specify a name for the network and storage resources for the cluster (e.g. the Nutanix cluster name), and select the IPAM enabled **Secondary** network. This will be the DHCP pool used by provisioned desktops and XenApp servers.
 
@@ -134,37 +134,37 @@ Once the VM has started, click **Launch Console**.
 
 Complete the Microsoft Out of Box Experience (OOBE) wizard:
 
-- Select Country, App language, and Keyboard layout, click **Next**.
+  - Select Country, App language, and Keyboard layout, click **Next**.
 
-- Review the licensing agreement, click **I Accept**.
+  - Review the licensing agreement, click **I Accept**.
 
-- Click **Customize**.
+  - Click **Customize**.
 
-- Set all features to **Off** and click **Next**.
+  - Set all features to **Off** and click **Next**.
 
   .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab4/3.png
 
-- Set all features to **Off** and click **Next**.
+  - Set all features to **Off** and click **Next**.
 
   .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab4/4.png
 
-- Set all features to **Off** and click **Next**.
+  - Set all features to **Off** and click **Next**.
 
   .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab4/5.png
 
-- Select **Join a local Active Directory domain** and click **Next**.
+  - Select **Join a local Active Directory domain** and click **Next**.
 
   .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab4/6.png
 
-- Create an account, **LocalUser**, and click **Next**.
+  - Create an account, **LocalUser**, and click **Next**.
 
   .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab4/7.png
 
-- Contemplate why this lab wasn't built with a Windows 7 image and click **Not Now** to disable Cortana.
+  - Click **Not Now** to disable Cortana.
 
   .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab4/8.png
 
-- Click **Next**.
+  - Click **Next**.
 
 Log in to **W10-Gold** as **LocalUser**.
 
