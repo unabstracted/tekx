@@ -136,6 +136,15 @@ acli image.create XRay container="${MY_IMG_CONTAINER_NAME}" image_type=kDiskImag
 my_log "Importing HYCU image"
 acli image.create HYCU container="${MY_IMG_CONTAINER_NAME}" image_type=kDiskImage source_url=http://10.21.64.50/images/hycu-2.0.0-2823.qcow2 wait=true
 
+my_log "Importing Xtract VM image"
+acli image.create Xtract-VM container="${MY_IMG_CONTAINER_NAME}" image_type=kDiskImage source_url=http://10.21.64.50/images/xtract-vm-1.1.3.qcow2 wait=true
+
+my_log "Importing Xtract DB image"
+acli image.create Xtract-DB container="${MY_IMG_CONTAINER_NAME}" image_type=kDiskImage source_url=http://10.21.64.50/images/Xtract-1.5.0.qcow2 wait=true
+
+my_log "Importing MSSQL 2014 Installation iso"
+acli image.create MSSQL-2014SP2-ISO container="${MY_IMG_CONTAINER_NAME}" image_type=kDiskImage source_url=http://10.21.64.50/images/SQLServer2014SP2-FullSlipstream-x64-ENU.iso wait=true
+
 # Remove existing VMs, if any
 my_log "Removing \"Windows 2012\" VM if it exists"
 acli -y vm.delete Windows\ 2012\ VM delete_snapshots=true

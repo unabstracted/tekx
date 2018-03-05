@@ -154,8 +154,6 @@ After ~2 hours, validate the presense of **Self Service Restore Snapshots** in *
 
 From **NTNXLAB\\devuser01's Personal Windows 10 Desktop** session, browse to your home directory. Open, modify, and save a text file. Right-click that file and select **Restore previous versions**. Open a previous version of the document corresponding to AFS snapshots and save as a new file.
 
-  .. figure:: http://s3.nutanixworkshops.com/ts18/afs/21b.png
-
 Configuring NFS Export
 ++++++++++++++++++++++
 
