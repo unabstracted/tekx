@@ -176,7 +176,7 @@ if [[ ${MY_SECONDARY_NET_NAME} ]]; then
   my_log "Create secondary network:"
   my_log "Name: ${MY_SECONDARY_NET_NAME}"
   my_log "VLAN: ${MY_SECONDARY_NET_VLAN}"
-  my_log "Subnet: 10.21.${MY_HPOC_NUMBER}.1/25"
+  my_log "Subnet: 10.21.${MY_HPOC_NUMBER}.129/25"
   my_log "Domain: ${MY_DOMAIN_NAME}"
   my_log "Pool: 10.21.${MY_HPOC_NUMBER}.132 to 10.21.${MY_HPOC_NUMBER}.253"
 
@@ -200,7 +200,7 @@ acli vm.create DC num_vcpus=2 num_cores_per_vcpu=1 memory=4G
 acli vm.disk_create DC cdrom=true empty=true
 acli vm.disk_create DC clone_from_image=AutoDC
 acli vm.nic_create DC network=${MY_PRIMARY_NET_NAME} ip=10.21.${MY_HPOC_NUMBER}.40
-acli vm.affinity_set DC host_list=10.21.${MY_HPOC_NUMBER}.26,10.21.${MY_HPOC_NUMBER}.27
+acli vm.affinity_set DC host_list=poc0${MY_HPOC_NUMBER}-2.nutanixdc.local,poc0${MY_HPOC_NUMBER}-2.nutanixdc.local
 my_log "Power on DC VM"
 acli vm.on DC
 
@@ -232,7 +232,7 @@ acli vm.create XD num_vcpus=4 num_cores_per_vcpu=1 memory=6G
 acli vm.disk_create XD cdrom=true clone_from_image=XenDesktop-7.15-ISO
 acli vm.disk_create XD clone_from_image=AutoXD
 acli vm.nic_create XD network=${MY_PRIMARY_NET_NAME} ip=10.21.${MY_HPOC_NUMBER}.41
-acli vm.affinity_set XD host_list=10.21.${MY_HPOC_NUMBER}.26,10.21.${MY_HPOC_NUMBER}.27
+acli vm.affinity_set XD host_list=poc0${MY_HPOC_NUMBER}-2.nutanixdc.local,poc0${MY_HPOC_NUMBER}-2.nutanixdc.local
 my_log "Power on XD VM"
 acli vm.on XD
 
@@ -243,7 +243,7 @@ acli vm.disk_create X-Ray cdrom=true empty=true
 acli vm.disk_create X-Ray clone_from_image=XRay
 acli vm.nic_create X-Ray network=${MY_PRIMARY_NET_NAME} ip=10.21.${MY_HPOC_NUMBER}.45
 acli vm.nic_create X-Ray network=${MY_XRAY_NET_NAME}
-acli vm.affinity_set XD host_list=10.21.${MY_HPOC_NUMBER}.26,10.21.${MY_HPOC_NUMBER}.27
+acli vm.affinity_set X-Ray host_list=poc0${MY_HPOC_NUMBER}-2.nutanixdc.local,poc0${MY_HPOC_NUMBER}-2.nutanixdc.local
 my_log "Power on X-Ray VM"
 acli vm.on X-Ray
 
@@ -253,7 +253,7 @@ acli vm.create HYCU num_vcpus=2 num_cores_per_vcpu=2 memory=4G
 acli vm.disk_create HYCU cdrom=true empty=true
 acli vm.disk_create HYCU clone_from_image=HYCU
 acli vm.nic_create HYCU network=${MY_PRIMARY_NET_NAME} ip=10.21.${MY_HPOC_NUMBER}.44
-acli vm.affinity_set HYCU host_list=10.21.${MY_HPOC_NUMBER}.26,10.21.${MY_HPOC_NUMBER}.27
+acli vm.affinity_set HYCU host_list=poc0${MY_HPOC_NUMBER}-2.nutanixdc.local,poc0${MY_HPOC_NUMBER}-2.nutanixdc.local
 my_log "Power on HYCU VM"
 acli vm.on HYCU
 
