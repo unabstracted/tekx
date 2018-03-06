@@ -5,7 +5,23 @@ Acropolis File Services
 Overview
 ++++++++
 
-In this exercise you will use Prism to deploy Acropolis File Services (AFS), a native, distributed file server solution for Nutanix clusters. This lab should be completed **AFTER** the :ref:`citrix_lab` lab.
+.. note::
+
+  This lab should be completed **AFTER** the :ref:`citrix_lab` lab.
+
+  Estimated time to complete: **1 HOUR**
+
+  **Due to limited resources, this lab should be completed as a group.**
+
+In this exercise you will use Prism to deploy Acropolis File Services (AFS), a native, distributed file server solution for Nutanix clusters. You will configure both SMB and NFS shares, and familiarize yourself with new features of the AFS offering.
+
+Getting Engaged with the Product Team
+.....................................
+
+- **Slack** - #afs
+- **Product Manager** - Shubhankar Chatterjee, shubhan.chatter@nutanix.com
+- **Product Marketing Manager** - Shubhika Taneja, shubhika.taneja@nutanix.com
+- **Technical Marketing Engineer** - Dwayne Lessner, dwayne@nutanix.com
 
 Deploy Acropolis File Services
 ++++++++++++++++++++++++++++++
@@ -228,10 +244,14 @@ Return to **Prism > File Server > Share > logs** to monitor performance and usag
 
   .. figure:: http://s3.nutanixworkshops.com/ts18/afs/25.png
 
-Conclusions
-+++++++++++
+Takeaways
++++++++++
 
-- Nutanix provides native file services suitable for storing user profiles and application data via SMB or NFSv4.
+- Nutanix provides file services suitable for storing user profiles and application data via SMB or NFSv4.
+
+- AFS is capable of scaling up and out to meet workload requirements.
+
+- AFS has data protection built-in by leveraging native snapshots and replication. AFS 3.0 will also feature integration with 3rd party backup solutions.
 
 - AFS can be deployed on the same Nutanix cluster as your virtual desktops, resulting in better utilization of storage capacity and the elimination of an additional storage silo.
 
