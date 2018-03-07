@@ -182,7 +182,7 @@ Create 3x CentOS Guest VMs using the cluster's configured network.
 - vCPU:2
 - Cores/vCPU: 1
 - Mem: 4GiB
-- IP Address: 10.21.X.50
+- IP Address: 10.21.X.47
 
 **[User yogi]**
 
@@ -191,7 +191,7 @@ Create 3x CentOS Guest VMs using the cluster's configured network.
 - vCPU:2
 - Cores/vCPU: 1
 - Mem: 4GiB
-- IP Address: 10.21.X.51
+- IP Address: 10.21.X.48
 
 **[User booboo]**
 
@@ -200,7 +200,7 @@ Create 3x CentOS Guest VMs using the cluster's configured network.
 - vCPU:2
 - Cores/vCPU: 1
 - Mem: 4GiB
-- IP Address: 10.21.X.52
+- IP Address: 10.21.X.49
 
 Install git
 ===========
@@ -220,7 +220,7 @@ Once Git installation has completed check the version:
   
 Create the users for each Guest VM:
 
-**Guest VM:** 10.21.X.50 (Git Server)
+**Guest VM:** 10.21.X.47 (Git Server)
 
 .. code-block:: bash
 
@@ -233,7 +233,7 @@ Create the users for each Guest VM:
    passwd: all authentication token updated successfully.
   [root@CentOS]# 
 
-**Guest VM:** 10.21.X.51 (User Yogi)
+**Guest VM:** 10.21.X.48 (User Yogi)
 
 .. code-block:: bash
     
@@ -245,7 +245,7 @@ Create the users for each Guest VM:
    passwd: all authentication tokens updated successfully
    [root@CentOS]# logout
    
-**Guest VM:** 10.21.X.52 (User booboo)
+**Guest VM:** 10.21.X.49 (User booboo)
 
 .. code-block:: bash
     
@@ -264,7 +264,7 @@ Git provides the git config tool, which allows you to set configuration variable
 
 Login to each Guest VMs; *10.21.X.51* and *10.21.X.52* for the assigned users; *yogi* and *booboo* respectively and set the following git paramaters:
 
-**Guest VM:** 10.21.X.51 (User Yogi)
+**Guest VM:** 10.21.X.48 (User Yogi)
 
 .. code-block:: bash
 
@@ -288,7 +288,7 @@ Login to each Guest VMs; *10.21.X.51* and *10.21.X.52* for the assigned users; *
   core.editor=vim
   merge.tool=vimdiff
 
-**Guest VM:** 10.21.X.52 (User booboo)
+**Guest VM:** 10.21.X.49 (User booboo)
 
 .. code-block:: bash
 
@@ -321,7 +321,7 @@ Create an empty Repository
 ==========================
 We'll initialize a new repository by using *init* command followed by *--bare* option. This initializes the repository without a working directory. By convention, the bare repository must be named as *.git*.
 
-*ssh* to the Git-Server: 10.21.X.50 as *gituser*.  Create/configure the repository as follows:
+*ssh* to the Git-Server: 10.21.X.47 as *gituser*.  Create/configure the repository as follows:
 
 .. code-block:: bash
 
@@ -342,7 +342,7 @@ We'll step through the process of configuring ssh keys and add them to the Git-S
 
 *SSH* to each Guest VM for the assigned user (i.e. yogi:10.21.X.51 and booboo:10.21.X.52), create the users ssh-keys, and  push them to the Git-Server:
 
-**Guest VM:** 10.21.X.51 (User Yogi)
+**Guest VM:** 10.21.X.48 (User Yogi)
 
 .. code-block:: bash
 
@@ -386,7 +386,7 @@ Add the public keys to the Git-Server:
 If/when prompted, provide the password for *gituser* and hit <enter> to complete the key installation.
 
 
-**Guest VM:** 10.21.X.51 (User booboo)
+**Guest VM:** 10.21.X.49 (User booboo)
 
 .. code-block:: bash
 
