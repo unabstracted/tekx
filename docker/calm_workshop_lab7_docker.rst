@@ -3,14 +3,15 @@ Docker
 **************
 
 
-Lab Overview
+Overview
 ************
-
 In this lab participants will learn how to install and configure Docker.  Once Docker is installed and stable, participants
 will learn to create and deploy a container...  Once completed, participants will containerize and deploy a 3 Tier LAMP
 application.
 
-Requirements:
+Estimated time to complete: **60mins**
+
+Requirements
 *************
 
 - CentOS Server v7 VM created:  centos-setup_ guide for docker.
@@ -18,7 +19,7 @@ Requirements:
 - NTNX Docker Plugin Installed: ntnx-plugin-setup_ guide for docker.
 - Docker Hub Account: https://hub.docker.com/
 
-Glossary:
+Glossary
 *********
 
 - **Image:** An image is a lightweight, stand-alone, executable package that includes everything needed to run a piece of software, including the code, a runtime, libraries, environment variables, and config files.
@@ -29,7 +30,7 @@ Glossary:
 
 - **Service:** In a distributed application, different pieces of the app are called “services.” For example, if you imagine a video sharing site, it probably includes a service for storing application data in a database, a service for video transcoding in the background after a user uploads something, a service for the front-end, and so on.  Services are really just “containers in production.” A service only runs one image, but it codifies the way that image runs—what ports it should use, how many replicas of the container should run so the service has the capacity it needs, and so on. Scaling a service changes the number of container instances running that piece of software, assigning more computing resources to the service in the process.
 
-Create Dockerfile:
+Create Dockerfile
 ******************
 
 Create an empty directory. Change directories (cd) into the new directory, create a file called Dockerfile, copy-and-paste the following content into that file, and save it. Take note of the comments that explain each statement in your new Dockerfile.
@@ -68,7 +69,7 @@ Proxy servers can block connections to your web app once it’s up and running. 
 
 This Dockerfile refers to a couple of files we haven’t created yet, namely app.py and requirements.txt. Let’s create those next.
 
-Create the Application:
+Create the Application
 ***********************
 
 Create two more files, **requirements.txt** and **app.py**, and put them in the same folder with the Dockerfile. This completes our app, which as you can see is quite simple. When the above Dockerfile is built into an image, app.py and requirements.txt will be present because of that Dockerfile’s ADD command, and the output from app.py will be accessible over HTTP thanks to the EXPOSE command.
@@ -272,11 +273,16 @@ If the image isn’t available locally on the machine, Docker will pull it from 
     Status: Downloaded newer image for dogfish/get-started:part2
     * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
 
-**Note:** If you don’t specify the :tag portion of these commands, the tag of :latest will be assumed, both when you build and when you run images. Docker will use the last version of the image that ran without a tag specified (not necessarily the most recent image).
+.. note:: If you don’t specify the :tag portion of these commands, the tag of :latest will be assumed, both when you build and when you run images. Docker will use the last version of the image that ran without a tag specified (not necessarily the most recent image).
 
 No matter where docker run executes, it pulls your image, along with Python and all the dependencies from requirements.txt, and runs your code. It all travels together in a neat little package, and the host machine doesn’t have to install anything but Docker to run it.
 
+Takeaways
+***********
+- Learned how to setup and configure a Docker development environment and connect the NTNX Plug-in.
+- Learned how to create and build a Docker Container for a 3-tier web application using Docker
+- Successfully Created a DockerHub Account and pushed/pulled docker images to/from the DockerHub repository. 
 
-.. _docker-installation: lab7/calm_workshop_lab7_setup.html
-.. _centos-setup: lab7/calm_workshop_lab7_centos_config.html
-.. _ntnx-plugin-setup: lab7/calm_workshop_lab7_ntnx_vol_driver_install.html
+.. _docker-installation: ./calm_workshop_lab7_setup.html
+.. _centos-setup: ./calm_workshop_lab7_centos_config.html
+.. _ntnx-plugin-setup: ./calm_workshop_lab7_ntnx_vol_driver_install.html

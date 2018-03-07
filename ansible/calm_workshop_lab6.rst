@@ -1,5 +1,5 @@
 ***************
-Lab 6 - Ansible
+Ansible
 ***************
 
 .. toctree::
@@ -10,10 +10,12 @@ Lab 6 - Ansible
      ansible/calm_workshop_ansible_modules
 
 
-Lab Overview
+Overview
 ************
 
 In this lab participants will install, configure, and deploy the Ansible orchestration software stack on CentOS Server v7 VM.  Once Ansible is stable, learners will develop and execute playbooks to deploy a LAMP stack and compare & contrast the differences with NuCalm.  We'll also explore developing running a simple Ansible module to standup infrastructure (i.e. VM creation).
+
+Estimated time to completion: **90mins**
 
 Introduction
 ************
@@ -26,7 +28,7 @@ Ansible takes on a modular approach, making it easy to extend to use the functio
 
 In this lab, you'll install Ansible on a CentOS 7 server and learn some basics of how to use the software.
 
-Step 1 - Environment Setup
+Environment Setup
 **************************
 
 To follow this tutorial, you will need:
@@ -35,7 +37,7 @@ To follow this tutorial, you will need:
 - Deploy 1x CentOS v7 VM to host Ansible. Name the VM *Ansible*.  Follow the steps in configure-centos-server-v7_ to create a non-root user.
 - Make sure you can connect to the servers using a password-less_ connection/session.
 
-Step 2 — Installing Ansible
+Installing Ansible
 ***************************
 
 To begin exploring Ansible as a means of managing our various servers, we need to install the Ansible software on at least one machine.  In this lab we'll install ansible using *yum*, but to be fare to the learner, the Ansible stack can also be installed using *git* or *pip*.
@@ -53,7 +55,7 @@ Once the repository is installed, install Ansible with yum:
   $ sudo yum install ansible
 
 
-Step 3 — Configuring Ansible Hosts
+Configuring Ansible Hosts
 **********************************
 
 Ansible keeps track of all of the servers that it knows about through a *"hosts"* file. We need to set up this file first before we can begin to communicate with our other computers.
@@ -135,7 +137,7 @@ Save and close this file when you are finished. Now Ansible will always use the 
 
 If you want to specify configuration details for every server, regardless of group association, you can put those details in a file at /etc/ansible/group_vars/all. Individual hosts can be configured by creating files under a directory at /etc/ansible/host_vars.
 
-Step 4 — Using Simple Ansible Commands
+Using Simple Ansible Commands
 **************************************
 
 Now that we have our hosts set up and enough configuration details to allow us to successfully connect to our hosts, we can try out our very first command.
@@ -210,7 +212,7 @@ By now, you should have your Ansible server configured to communicate with the s
 
 Although this is useful, we have not covered the most powerful feature of Ansible in this lab: **Playbooks.** You have configured a great foundation for working with your servers through Ansible, so your next step is to learn how to use Playbooks to do the heavy lifting for you.
 
-Step 5 - Preparing The System for Development - Installing Python
+Preparing The System for Development - Installing Python
 *****************************************************************
 
 Installation of Python on CentOS consists of a few (simple) stages, starting with updating the system, followed by getting any desired version of Python, and proceeding with the set up process.
@@ -276,7 +278,7 @@ To download some additional packages which are handy:
 Remember: Albeit optional, these "handy" tools are very much required for most of the tasks that you will come across in future. Unless they are installed in advance, Python, during compilation, will not be able to link to them.
 
 
-Step 6 - Run Ansible Playbook to Deploy LAMP stack
+Run Ansible Playbook to Deploy LAMP stack
 **************************************************
 
 **These playbooks require Ansible 1.2 or greater**
@@ -287,7 +289,7 @@ that you use CentOS Server v7 to test these modules.
 
 Download the playbook.tar (see link below) and copy it to directory /etc/ansible/ on the server hosting Ansible.
 
-:download:`playbooks.tar <lab6/calm_workshop_lab6_lamp_example.tar.gz>`
+:download:`playbooks.tar <./calm_workshop_lab6_lamp_example.tar.gz>`
 
 Extract the archive as follows:
 
@@ -343,12 +345,13 @@ Click on the hyperlink Homepage_ displayed in the browser. The browser should di
 
    Hello Calm Workshop! My App deployed via Ansible...
 
-Summary:
+Takeaways
 *********
-
-Congratulations!  You're now ready to be a DevOps Engineer!!
+- Learned how to standup and configure an Ansible distributed service network with Host resources.
+- Successfully deployed Ansible playbooks to configure and provision infrastructure.
+- Successfully automated change management to configure a 3-tier web application.
 
 .. _Homepage:
-.. _configure-centos-server-v7: lab6/calm_workshop_lab6_config_centos.html
-.. _password-less: lab6/calm_workshop_lab6_nopass.html
+.. _configure-centos-server-v7: ./calm_workshop_lab6_config_centos.html
+.. _password-less: ./calm_workshop_lab6_nopass.html
 .. _Building-DockerImages-Automatically-With-Jenkins-Pipeline: https://blog.nimbleci.com/2016/08/31/how-to-build-docker-images-automatically-with-jenkins-pipeline/

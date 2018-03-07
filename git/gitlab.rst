@@ -1,9 +1,9 @@
 *************
-Lab - Git
+Git
 *************
 
 
-Introduction:
+Overview
 *************
 Git is a distributed revision control and source code management system with an emphasis on speed. Git was initially designed and developed by Linus Torvalds for Linux kernel development and is a free software distributed under the terms of the GNU General Public License.
 
@@ -13,7 +13,9 @@ The Lab will help beginners learn the basic functionality of Git version control
 
 This lab assumes participants are going to use Git to handle various projects. It's good to have some exposure to software development life cycle and working knowledge of application development but not required.
 
-Basic Concepts:
+Estimated time to complete: **90mins**
+
+Basic Concepts
 ***************
 Version Control System (VCS) is software that helps software developers work together and maintain a complete history of their work.
 
@@ -23,7 +25,7 @@ Listed below are the functions of a VCS:
 - Does not allow overwriting each other’s changes.
 - Maintains a history of every version.
 
-Git Advantages:
+Git Advantages
 ***************
 
 Open Source
@@ -46,7 +48,7 @@ Simple branching
 =================
 Typical CVCS systems use cheap copy mechanisms when creating a new branch. Git branch management is very simple taking only a few seconds to create, delete, and merge branches.
 
-Terminologies:
+Terminologies
 **************
 
 Local Repository
@@ -152,7 +154,7 @@ URLs represent the Git repository location. Git URLs are stored in the config fi
   url = gituser@git.server.com:project.git
   fetch = +refs/heads/*:refs/remotes/origin/*
   
-Workflows:
+Workflows
 **********
 General workflows are as follows:
 
@@ -256,7 +258,7 @@ Create the users for each Guest VM:
    [root@CentOS]# logout
    
 
-Customize Git Environment:
+Customize Git Environment
 **************************
 Git provides the git config tool, which allows you to set configuration variables. Git stores all global configurations in */home/<user>/.gitconfig* file, located in the users home directory. To set these configuration values as global, add the *--global* option.  
 
@@ -311,7 +313,7 @@ Login to each Guest VMs; *10.21.X.51* and *10.21.X.52* for the assigned users; *
   merge.tool=vimdiff
 
   
-Create Operation:
+Create Operation
 *****************
 In this section, we'll create a remote Git repository/Git Server for collaboration...
   
@@ -493,7 +495,7 @@ The above command will produce the following result.
   
 Now, the changes are successfully committed to the remote repository.
 
-Clone Operation:
+Clone Operation
 ****************
 We now have a bare repository on the Git server and yogi pushed his first version. Now, booboo can view his changes. The Clone operation creates an instance of the remote repository.
 
@@ -524,7 +526,7 @@ booboo changes the directory to new local repository and lists its directory con
    README
 
 
-Add Operation:
+Add Operation
 **************
 booboo has successfully cloned the repository and decides to add a file. So he creates file booboo.md using his favorite editor.  The contents for file booboo.md is as follows:
 
@@ -591,7 +593,7 @@ The above command will produce the following result:
   Initial commit
   
 
-Push Operation:
+Push Operation
 ***************
 booboo added a new file to the repository and commited has updates/changes and is ready to push operation. The Push operation stores data permanently to the Git repository allowing other project team members to see booboo's changes.
 
@@ -743,3 +745,13 @@ And finally push it to the branch:
   Total 3 (delta 0), reused 0 (delta 0)
   To gituser@10.68.69.52:project.git
      4c6f875..109328f  master -> master
+     
+     
+Takeaways
+**********
+- Learned how to configure a distributed **Git** development environment with repository.
+- Stepped through a common workfolow of creating, adding, and modifying files using **Git** command line operations.
+- Successfully managed a central **Git** repository shared across the network...
+- Learned how newly created files are staged prior to persisting within a repository.
+- Observed how to check change-log status and change history...
+ 
