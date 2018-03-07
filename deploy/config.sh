@@ -3,6 +3,14 @@
 # Please configure according to your needs
 #
 
+function remote_exec {
+    sshpass -p nutanix/4u ssh -o StrictHostKeyChecking=no -o GlobalKnownHostsFile=/dev/null -o UserKnownHostsFile=/dev/null nutanix@10.21.${MY_HPOC_NUMBER}.39 "$@"
+}
+
+function pc_ncli {
+    remote_exec /home/nutanix/prism/cli/ncli "$@"
+}
+
 # Loging date format
 #TODO: Make logging format configurable
 #MY_LOG_DATE='date +%Y-%m-%d %H:%M:%S'
@@ -200,7 +208,7 @@ acli vm.create DC num_vcpus=2 num_cores_per_vcpu=1 memory=4G
 acli vm.disk_create DC cdrom=true empty=true
 acli vm.disk_create DC clone_from_image=AutoDC
 acli vm.nic_create DC network=${MY_PRIMARY_NET_NAME} ip=10.21.${MY_HPOC_NUMBER}.40
-acli vm.affinity_set DC host_list=poc0${MY_HPOC_NUMBER}-2.nutanixdc.local,poc0${MY_HPOC_NUMBER}-2.nutanixdc.local
+acli vm.affinity_set DC host_list=10.21.${MY_HPOC_NUMBER}.26,10.21.${MY_HPOC_NUMBER}.27,10.21.${MY_HPOC_NUMBER}.28
 my_log "Power on DC VM"
 acli vm.on DC
 
@@ -226,13 +234,18 @@ my_log "Create PE user account xd for MCS Plugin"
 ncli user create user-name=xd user-password=nutanix/4u first-name=XenDesktop last-name=Service email-id=no-reply@nutanix.com
 ncli user grant-cluster-admin-role user-name=xd
 
+# Provision local Prism account for HYCU
+my_log "Create PE user account hycu for HYCU"
+ncli user create user-name=hycu user-password=nutanix/4u first-name=HYCU last-name=Service email-id=no-reply@nutanix.com
+ncli user grant-cluster-admin-role user-name=hycu
+
 # Create XD & power on
 my_log "Create XD VM"
 acli vm.create XD num_vcpus=4 num_cores_per_vcpu=1 memory=6G
 acli vm.disk_create XD cdrom=true clone_from_image=XenDesktop-7.15-ISO
 acli vm.disk_create XD clone_from_image=AutoXD
 acli vm.nic_create XD network=${MY_PRIMARY_NET_NAME} ip=10.21.${MY_HPOC_NUMBER}.41
-acli vm.affinity_set XD host_list=poc0${MY_HPOC_NUMBER}-2.nutanixdc.local,poc0${MY_HPOC_NUMBER}-2.nutanixdc.local
+acli vm.affinity_set XD host_list=10.21.${MY_HPOC_NUMBER}.26,10.21.${MY_HPOC_NUMBER}.27,10.21.${MY_HPOC_NUMBER}.28
 my_log "Power on XD VM"
 acli vm.on XD
 
@@ -243,7 +256,7 @@ acli vm.disk_create X-Ray cdrom=true empty=true
 acli vm.disk_create X-Ray clone_from_image=XRay
 acli vm.nic_create X-Ray network=${MY_PRIMARY_NET_NAME} ip=10.21.${MY_HPOC_NUMBER}.45
 acli vm.nic_create X-Ray network=${MY_XRAY_NET_NAME}
-acli vm.affinity_set X-Ray host_list=poc0${MY_HPOC_NUMBER}-2.nutanixdc.local,poc0${MY_HPOC_NUMBER}-2.nutanixdc.local
+acli vm.affinity_set X-Ray host_list=10.21.${MY_HPOC_NUMBER}.26,10.21.${MY_HPOC_NUMBER}.27,10.21.${MY_HPOC_NUMBER}.28
 my_log "Power on X-Ray VM"
 acli vm.on X-Ray
 
@@ -253,7 +266,7 @@ acli vm.create HYCU num_vcpus=2 num_cores_per_vcpu=2 memory=4G
 acli vm.disk_create HYCU cdrom=true empty=true
 acli vm.disk_create HYCU clone_from_image=HYCU
 acli vm.nic_create HYCU network=${MY_PRIMARY_NET_NAME} ip=10.21.${MY_HPOC_NUMBER}.44
-acli vm.affinity_set HYCU host_list=poc0${MY_HPOC_NUMBER}-2.nutanixdc.local,poc0${MY_HPOC_NUMBER}-2.nutanixdc.local
+acli vm.affinity_set HYCU host_list=10.21.${MY_HPOC_NUMBER}.26,10.21.${MY_HPOC_NUMBER}.27,10.21.${MY_HPOC_NUMBER}.28
 my_log "Power on HYCU VM"
 acli vm.on HYCU
 
@@ -347,5 +360,43 @@ EOF
 )
 curl -u admin:${MY_PE_PASSWORD} -k -H 'Content-Type: application/json' -X POST https://127.0.0.1:9440/api/nutanix/v3/prism_central -d "${MY_DEPLOY_BODY}"
 
+my_log "Waiting for PC deployment to complete (Sleeping 15m)"
+sleep 900
+
+# Set Prism Central Password to Prism Element Password
+my_log "Setting PC password to PE password"
+pc_ncli user reset-password user-name="admin" password="${MY_PE_PASSWORD}"
+
+# Add NTP Server\
+my_log "Configure NTP on PC"
+pc_ncli cluster add-to-ntp-servers servers=0.us.pool.ntp.org,1.us.pool.ntp.org,2.us.pool.ntp.org,3.us.pool.ntp.org
+
+# Accept Prism Central EULA
+my_log "Validate EULA on PC"
+curl -u admin:${MY_PE_PASSWORD} -k -H 'Content-Type: application/json' -X POST \
+  https://10.21.${MY_HPOC_NUMBER}.39:9440/PrismGateway/services/rest/v1/eulas/accept \
+  -d '{
+    "username": "SE",
+    "companyName": "NTNX",
+    "jobTitle": "SE"
+}'
+
+# Disable Prism Element Pulse
+my_log "Disable Pulse on PC"
+curl -u admin:${MY_PE_PASSWORD} -k -H 'Content-Type: application/json' -X PUT \
+  https://10.21.${MY_HPOC_NUMBER}.39:9440/PrismGateway/services/rest/v1/pulse \
+  -d '{
+    "emailContactList":null,
+    "enable":false,
+    "verbosityType":null,
+    "enableDefaultNutanixEmail":false,
+    "defaultNutanixEmail":null,
+    "nosVersion":null,
+    "isPulsePromptNeeded":false,
+    "remindLater":null
+}'
+
 my_log "Removing sshpass"
 sudo rpm -e sshpass
+
+my_log "Configuration complete"
