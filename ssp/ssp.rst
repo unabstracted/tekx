@@ -5,7 +5,20 @@ Self-Service Portal
 Overview
 ++++++++
 
+.. note::
+  This lab should be done first.
+
+  Estimated time to complete: **45 Minutes**
+
+  **Due to limited resources, this lab should be completed as a group.**
+
 In this exercise you will use Prism Central to configure Self Service Portal (SSP) from Prism Element, and create multiple projects for different groups of users. This lab should be completed **BEFORE** the Calm lab.
+
+Getting Engaged with the Product Team
+.....................................
+- **Slack** - #ssp
+- **Product Manager** - Constantine Kousoulis, constantine.kousouli@nutanix.com
+- **Product Marketing Manager** - Shubhika Taneja, shubhika.taneja@nutanix.com
 
 Setup Authentication and Role Mapping in Prism Central
 +++++++++++++++++
