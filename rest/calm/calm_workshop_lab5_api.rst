@@ -27,6 +27,12 @@ NTNX REST API Explorer Requests:
 
 Estimated time to complete: **2.5hrs**
 
+**Product Feature Reseources**
+
+- slack: #sme_devops
+- PdM: Tarak Parekh
+- Solutions: Andy Schmid
+
 Requirements:
 *************
 
