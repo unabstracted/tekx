@@ -178,7 +178,7 @@ html_theme_options = {
     'bootstrap_version': "3",
 }
 
-html_sidebars = {'afs/**': ['localtoc.html'],'ansible/**': ['localtoc.html'],'calm/**': ['localtoc.html'],'chef/**': ['localtoc.html'],'citrix/**': ['localtoc.html'],'docker/**': ['localtoc.html'],'example/**': ['localtoc.html'],'git/**': ['localtoc.html'],'hycu/**': ['localtoc.html'],'intro/**': ['localtoc.html'],'jenkins/**': ['localtoc.html'],'k8s/**': ['localtoc.html'],'puppet/**': ['localtoc.html'],'rest/**': ['localtoc.html'],'ssp/**': ['localtoc.html'],'terraform/**': ['localtoc.html'],'xray/**': ['localtoc.html'],'xtract/**': ['localtoc.html']}
+html_sidebars = {'afs/**': ['localtoc.html'],'ansible/**': ['localtoc.html'],'calm/**': ['localtoc.html'],'chef/**': ['localtoc.html'],'citrix/**': ['localtoc.html'],'docker/**': ['localtoc.html'],'example/**': ['localtoc.html'],'git/**': ['localtoc.html'],'hycu/**': ['localtoc.html'],'intro/**': ['localtoc.html'],'jenkins/**': ['localtoc.html'],'k8s/**': ['localtoc.html'],'puppet/**': ['localtoc.html'],'rest/**': ['localtoc.html'],'ssp/**': ['localtoc.html'],'terraform/**': ['localtoc.html'],'xray/**': ['localtoc.html'],'xtract-vm/**': ['localtoc.html'],'xtract-db/**': ['localtoc.html']}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
