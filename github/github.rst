@@ -1,12 +1,14 @@
 ******************
-Lab - GitHub
+GitHub
 ******************
 
-Introduction:
+Overview:
 *************
 GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
 
 This lab teaches you GitHub essentials like repositories, branches, commits, and Pull Requests. You’ll create your own Hello World repository and learn GitHub’s Pull Request workflow, a popular way to create and review code.
+
+Estimated time to complete: **20mins**
 
 No coding necessary
 ===================
@@ -138,8 +140,8 @@ Celebrate!
 ==========
 By completing this lab, you’ve learned to create a project and make a pull request on GitHub! :tada: :octocat: :zap:
 
-Here’s what you accomplished in this lab:
-
+Takeaways
+***********
 - Created an open source repository
 - Started and managed a new branch
 - Changed a file and committed those changes to GitHub
