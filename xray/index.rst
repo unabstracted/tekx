@@ -5,7 +5,13 @@ X-Ray
 Overview
 ++++++++
 
-**This lab should be started by 4PM on Tuesday.**
+.. note::
+
+  **This lab should be completed at the end of the day on Tuesday as the Extended Node Failure test will run for several hours.**
+
+  Estimated time to complete: **1 HOUR**
+
+  **Due to limited resources, this lab should be completed as a group.**
 
 X-Ray is an automated testing application for virtualized infrastructure solutions. It is capable of running test scenarios end-to-end to evaluate system attributes in
 real-world use cases. The test scenarios in X-Ray provide information about the following system attributes:
@@ -18,6 +24,15 @@ perform well with mixed workloads.
 Feature Set Implications
 X-Ray tests use standard APIs throughout tests to clone and manage VMs, take snapshots, and perform other system manipulations. Systems should perform
 efficiently while using features intended for virtualized infrastructure.
+
+Getting Engaged with the Product Team
+.....................................
+
+- **Slack** - #x-ray
+- **Product Manager** - Priyadarshi Prasad, priyadarshi@nutanix.com
+- **Product Marketing Manager** - Marc Trouard-Riolle, marc.trouardriolle@nutanix.com
+- **Technical Marketing Engineer** - Gary Little, gary@nutanix.com
+- **Engineering** - Chris Wilson, chris.wilson@nutanix.com
 
 Configuring X-Ray VM
 ++++++++++++++++++++
@@ -190,10 +205,10 @@ In this scenario we see a slight impact to Nutanix (green) OLTP IOPS immediately
 
   .. figure:: http://s3.nutanixworkshops.com/ts18/xray/20.png
 
-Conclusions
+Takeaways
 +++++++++++
 
-- Best practice is to deploy X-Ray on an external system
-- X-Ray doesn't require complex network configuration and can be used with or without DHCP
-- Multiple X-Ray tests can be queued simultaneously
-- Or key differentiators
+  - Best practice is to deploy X-Ray on an external system
+  - X-Ray doesn't require complex network configuration and can be used with or without DHCP
+  - Multiple X-Ray tests can be queued simultaneously
+  - Or key differentiators

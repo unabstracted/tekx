@@ -247,18 +247,18 @@ Return to **Prism > File Server > Share > logs** to monitor performance and usag
 Takeaways
 +++++++++
 
-- Nutanix provides file services suitable for storing user profiles and application data via SMB or NFSv4.
+  - Nutanix provides file services suitable for storing user profiles and application data via SMB or NFSv4.
 
-- AFS is capable of scaling up and out to meet workload requirements.
+  - AFS is capable of scaling up and out to meet workload requirements.
 
-- AFS has data protection built-in by leveraging native snapshots and replication. AFS 3.0 will also feature integration with 3rd party backup solutions.
+  - AFS has data protection built-in by leveraging native snapshots and replication. AFS 3.0 will also feature integration with 3rd party backup solutions.
 
-- AFS can be deployed on the same Nutanix cluster as your virtual desktops, resulting in better utilization of storage capacity and the elimination of an additional storage silo.
+  - AFS can be deployed on the same Nutanix cluster as your virtual desktops, resulting in better utilization of storage capacity and the elimination of an additional storage silo.
 
-- Supporting mixed workloads (e.g. virtual desktops and file services) is further enhanced by Nutanix's ability to mix different node configurations within a single cluster, such as:
+  - Supporting mixed workloads (e.g. virtual desktops and file services) is further enhanced by Nutanix's ability to mix different node configurations within a single cluster, such as:
 
-  - Mixing storage heavy and compute heavy nodes
-  - Expanding a cluster with Storage Only nodes to increase storage capacity without incurring additional virtualization licensing costs
-  - Mixing different generations of hardware (e.g. NX-3460-G6 + NX-6235-G5)
-  - Mixing all flash nodes with hybrid nodes
-  - Mixing NVIDIA GPU nodes with non-GPU nodes
+    - Mixing storage heavy and compute heavy nodes
+    - Expanding a cluster with Storage Only nodes to increase storage capacity without incurring additional virtualization licensing costs
+    - Mixing different generations of hardware (e.g. NX-3460-G6 + NX-6235-G5)
+    - Mixing all flash nodes with hybrid nodes
+    - Mixing NVIDIA GPU nodes with non-GPU nodes

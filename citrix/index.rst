@@ -7,11 +7,25 @@ Citrix XenDesktop
 Overview
 ++++++++
 
-In this exercise you will use the Citrix Studio to deploy non-persistent and persistent virtual desktops based on a gold image. You will install the MCS plugin for Nutanix AHV, configure a XenDesktop site, deploy both Machine Catalogs and Delivery Groups, and test connecting to virtual desktops.
+.. note::
 
-Machine Catalogs are collections of either physical or virtual machines. When using MCS or PVS to provision a Machine Catalog from a gold image, all machines provisioned from that image will share the same VM configuration (vCPUs, Memory, Network) and be part of the same domain. A single gold image can be used for multiple Machine Catalogs to provide different size VMs, VMs across multiple domains, etc.
+  Estimated time to complete: **1 HOUR**
 
-Delivery Groups are collections of machines from one or more Machine Catalogs. The purpose of a Delivery Group is to specify what users or groups can access the machines. For persistent desktops a permanent relationship is created between the machine and the user account. This assignment can occur either manually during creation of the Delivery Group or be assigned automatically during a user's first logon.
+  **Due to limited resources, this lab should be completed as a group.**
+
+XenDesktop is an ideal workload for driving AHV adoption. Customers can eliminate hypervisor licensing costs and simplify management of their XenDesktop infrastructure, all without sacrificing features or performance.
+
+In this exercise you will use the Citrix Studio to deploy non-persistent and persistent virtual desktops based on a gold image. You will install the Machine Creation Services (MCS) plugin for Nutanix AHV, configure a XenDesktop site, deploy both Machine Catalogs and Delivery Groups, and test connecting to virtual desktops.
+
+Getting Engaged with the Product Team
+.....................................
+
+- **Slack** - #citrix #vdi-king
+- **Product Manager** - Prashant Batra, prashant.batra@nutanix.com
+- **Product Marketing Manager** - Upasna Gupta, upasna.gupta@nutanix.com
+- **Technical Marketing Engineer** - Brian Suhr, brian.suhr@nutanix.com
+- **Subject Matter Experts** - Kees Baggerman, kees.baggerm@nutanix.com; Tomas Griger, tomas.griger@nutanix.com
+- **Alliances** - Daryl Stanbery, daryl.stanbery@nutanix.com
 
 Configuring XenDesktop
 ++++++++++++++++++++++
@@ -31,7 +45,7 @@ Click **Next > Install > Finish**.
 
   .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab3/16.png
 
-Restart the VM.
+.. note:: In a production environment where you would typically have 2+ XenDesktop Delivery Controllers for high availability, you would install the MCS plugin on each Delivery Controller.
 
 Configuring XenDesktop Site
 ...........................
@@ -261,6 +275,8 @@ Under **Disks > CD-ROM**, click :fa:`eject` to unmount the XenDesktop installati
 
 Click **Save**.
 
+.. note:: The gold image is not joined to the domain. This process is handled during the Preparation phase of creating a Machine Catalog from the gold image.
+
 Creating Gold Image Snapshot
 ............................
 
@@ -279,6 +295,8 @@ Delivering Non-Persistent Desktops
 
 Creating the Machine Catalog
 ............................
+
+Machine Catalogs are collections of either physical or virtual machines. When using MCS or PVS to provision a Machine Catalog from a gold image, all machines provisioned from that image will share the same VM configuration (vCPUs, Memory, Network) and be part of the same domain. A single gold image can be used for multiple Machine Catalogs to provide different size VMs, VMs across multiple domains, etc.
 
 In the **XD** VM console, open **Citrix Studio**.
 
@@ -364,6 +382,8 @@ Upon completion, view the details of the Machine Catalog in **Citrix Studio**.
 
 Creating the Delivery Group
 ...........................
+
+Delivery Groups are collections of machines from one or more Machine Catalogs. The purpose of a Delivery Group is to specify what users or groups can access the machines. For persistent desktops a permanent relationship is created between the machine and the user account. This assignment can occur either manually during creation of the Delivery Group or be assigned automatically during a user's first logon. For non-persistent desktops the Delivery Controller will assign a user to a virtual machine for only the duration of the session.
 
 Right-click **Delivery Groups > Create Delivery Group**.
 
@@ -592,21 +612,21 @@ In **Citrix Studio**, observe the changes to VM details. As a user logs in they 
 
   .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/34.png
 
-Conclusions
+Takeaways
 +++++++++++
 
-- When using MCS for provisioning, the master VM does not require Sysprep or being domain joined.
+  - **Nutanix and AHV make deploying and managing a Citrix XenDesktop environment as simple as possible.**
 
-- Using MCS helps simplify the gold image by not having to manually specify (or depend on Active Directory to specify) what XenDesktop Delivery Controller(s) with which the image should attempt to register. This allows more flexibility in having a single gold image support multiple environments without external dependencies.
+  - Using MCS helps simplify the gold image by not having to manually specify (or depend on Active Directory to specify) what XenDesktop Delivery Controller(s) with which the image should attempt to register. This allows more flexibility in having a single gold image support multiple environments without external dependencies.
 
-- With MCS, a single gold image can be used for both persistent and non-persistent Machine Catalogs.
+  - With MCS, a single gold image can be used for both persistent and non-persistent Machine Catalogs.
 
-- Despite being based off of a single, shared, gold image, all the VMs in the Machine Catalog continue to benefit from data locality (reduced latency for reads and reduced network congestion). For non-AHV hypervisors, the same benefit is realized through Shadow Clones.
+  - Despite being based off of a single, shared, gold image, all the VMs in the Machine Catalog continue to benefit from data locality (reduced latency for reads and reduced network congestion). For non-AHV hypervisors, the same benefit is realized through Shadow Clones.
 
-- Intelligent cloning avoids significant storage overhead for deploying persistent virtual desktops. If mixing persistent and non-persisdent desktops within the same cluster, best practice would be to leverage a storage container with deduplication enabled for persistent desktops and a separate storage container with deduplication disabled for non-persistent desktops. Having the flexibility to pair workloads with appropriate storage efficiency technologies can imrpvoe density and reduce waste.
+  - Intelligent cloning avoids significant storage overhead for deploying persistent virtual desktops. If mixing persistent and non-persisdent desktops within the same cluster, best practice would be to leverage a storage container with deduplication enabled for persistent desktops and a separate storage container with deduplication disabled for non-persistent desktops. Having the flexibility to pair workloads with appropriate storage efficiency technologies can improve density and reduce waste.
 
-- Citrix MCS allows for end to end provisioning and entitlement management in a single console.
+  - Citrix MCS allows for end to end provisioning and entitlement management in a single console. Unlike PVS there are no additional infrastructure components that need to be sized for, deployed, and managed.
 
-- Non-persistent virtual desktops provide a consistent experience as the user is getting a "fresh" VM upon every login. This approach can provide significant operation savings over traditional software patching, but will likely require other tools to provide needed customization on top of the non-persistent desktop. Use cases such as kiosks or educational labs can be a great fit for "vanilla" non-persistent desktops.
+  - Non-persistent virtual desktops provide a consistent experience as the user is getting a "fresh" VM upon every login. This approach can provide significant operation savings over traditional software patching, but will likely require other tools to provide needed customization on top of the non-persistent desktop. Use cases such as kiosks or educational labs can be a great fit for "vanilla" non-persistent desktops.
 
-- Persistent virtual desktops provide a traditional desktop-like experience where a user can have full control over their desktop experience. This approach may be necessary for a small subset of users but typically isn't desirable at scale due to the continued dependence on legacy software patching tools.
+  - Persistent virtual desktops provide a traditional desktop-like experience where a user can have full control over their desktop experience. This approach may be necessary for a small subset of users but typically isn't desirable at scale due to the continued dependence on legacy software patching tools.

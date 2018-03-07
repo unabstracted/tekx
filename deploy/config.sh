@@ -142,7 +142,7 @@ my_log "Importing X-Ray image"
 acli image.create XRay container="${MY_IMG_CONTAINER_NAME}" image_type=kDiskImage source_url=http://10.21.64.50/images/xray.qcow2 wait=true
 
 my_log "Importing HYCU image"
-acli image.create HYCU container="${MY_IMG_CONTAINER_NAME}" image_type=kDiskImage source_url=http://10.21.64.50/images/hycu-2.0.0-2823.qcow2 wait=true
+acli image.create HYCU container="${MY_IMG_CONTAINER_NAME}" image_type=kDiskImage source_url=http://10.21.64.50/images/hycu-2.0.1-2823.qcow2 wait=true
 
 my_log "Importing Xtract VM image"
 acli image.create Xtract-VM container="${MY_IMG_CONTAINER_NAME}" image_type=kDiskImage source_url=http://10.21.64.50/images/xtract-vm-1.1.3.qcow2 wait=true
@@ -381,7 +381,7 @@ curl -u admin:${MY_PE_PASSWORD} -k -H 'Content-Type: application/json' -X POST \
     "jobTitle": "SE"
 }'
 
-# Disable Prism Element Pulse
+# Disable Prism Central Pulse
 my_log "Disable Pulse on PC"
 curl -u admin:${MY_PE_PASSWORD} -k -H 'Content-Type: application/json' -X PUT \
   https://10.21.${MY_HPOC_NUMBER}.39:9440/PrismGateway/services/rest/v1/pulse \
