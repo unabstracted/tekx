@@ -12,6 +12,7 @@ Estimated time to complete: **50mins**
 
 **Product Feature Resource(s)**
 
+- slack: #calm
 - PdM:  Jasnoor Gill
 - Solutions: Mark Lavi, Andy Schmid
 
