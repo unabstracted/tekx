@@ -5,7 +5,21 @@ Xtract for VMs
 Overview
 ++++++++
 
+.. note::
+
+  This lab should be completed **AFTER** the :ref:`ssp` lab.
+
+  Estimated time to complete: **1 HOUR**
+
 In this exercise you will deploy, and use the Xtract tools to migrate a VM.
+
+Getting Engaged with the Product Team
+.....................................
+
+- **Slack** - #xtract
+- **Product Manager** - Jeremy Launier, jeremy.launier@nutanix.com
+- **Product Marketing Manager** - Marc Trouard-Riolle, marc.trouardriolle@nutanix.com
+- **Technical Marketing Engineer** - Mike McGhee, michael.mcghee@nutanix.com
 
 Deploy Xtract for VMs from Prism
 +++++++++++++++++

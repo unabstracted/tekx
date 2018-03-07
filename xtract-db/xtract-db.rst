@@ -1,20 +1,34 @@
 -------------------
-Xtract for DBs
+Xtract for Databases
 -------------------
 
 Overview
 ++++++++
 
+.. note::
+
+  This lab should be completed **AFTER** the :ref:`ssp` lab.
+
+  Estimated time to complete: **1 HOUR**
+
 In this exercise you will deploy, and use the Xtract tool to migrate a Database.
 
-Deploy Xtract for DBs
+Getting Engaged with the Product Team
+.....................................
+
+- **Slack** - #xtract
+- **Product Manager** - Jeremy Launier, jeremy.launier@nutanix.com
+- **Product Marketing Manager** - Marc Trouard-Riolle, marc.trouardriolle@nutanix.com
+- **Technical Marketing Engineer** - Mike McGhee, michael.mcghee@nutanix.com
+
+Deploy Xtract for DB
 +++++++++++++++++
 
-In **Prism > VM**, click **VM**, then click **Table**
+In **Prism Central > Explore*, click **VMs**.
 
-.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb01.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb01.png
 
-Click **+ Create VM**
+Click **Create VM**.
 
 Fill out the following fields and click **Save**:
 
@@ -28,22 +42,22 @@ Fill out the following fields and click **Save**:
 - **Network** - Primary
 - **IP Address** - 10.21.XX.43
 
-Now Power on the **Xtract-DB** VM
+Now Power on the **Xtract-DB** VM.
 
-When it completes it open a browser window to the **Xtract for DBs** Dashboard, https://10.21.XX.43
+When it completes, open a browser window to the **Xtract for DBs** Dashboard, https://10.21.XX.43
 
 Login with the following credentials:
 
 - **Username** - nutanix
 - **Password** - nutanix/4u
 
- Fill in **Name**, **Comapny**, and **Job Title**, then **Accept** the EULA
+ Fill in **Name**, **Company**, and **Job Title**, then **Accept** the EULA.
 
-.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb02.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb02.png
 
-Click **OK** on the **Nutanix Customer Experience Program** pop-up
+Click **OK** on the **Nutanix Customer Experience Program** pop-up.
 
-.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb03.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb03.png
 
 Create Project & Migrate Database with Xtract for DBs
 +++++++++++++
@@ -55,66 +69,71 @@ Create New Migration Project
 
 Enter project name, and click **Create New Project**:
 
-**Project Name** - Website DB
+**Project Name** - Website DB.
 
-.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb04.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb04.png
 
 Fill out the following fields and click **Begin Scan**:
 
-- **HOSTNAME (OR IP ADDRESS)** - IP of the Windows 2012 Server MS SQL lives on
-- **Instance Name (Or Port)** - 1433
-- **Username** - administrator
-- **Password** - nutanix/4u
 - **Scan Name** - Parts DB
+- **HOSTNAME (OR IP ADDRESS)** - *IP of the Windows 2012 Server MS SQL lives on*
+- **Instance Name (Or Port)** - 1433
+- **Username** - NTNXLAB\Administrator
+- **Password** - nutanix/4u
 
-.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb05.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb05.png
 
-If/When the scan fails, you will need uplift the permissions of the scan User
+If/When the scan fails, you will need uplift the permissions of the scan User.
 
-Click the **Actions** dropdown, and select **Elevate Scan User Privileges**
+Click the **Actions** dropdown, and select **Elevate Scan User Privileges**.
 
-.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb06.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb06.png
 
 Fill out the following fields and click **Re-Scan**:
 
 - **Username** - sa
 - **Password** - nutanix/4u
 
-.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb07.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb07.png
 
-After the scan completes successfully, you will see the overview page
+If/When the **XP Command Shell** pop-up displays, fill out the following fields and click **Done**;
 
-.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb08.png
+- **Username** - sa
+- **Password** - nutanix/4u
+
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb36.png
+
+After the scan completes successfully, you will see the overview page.
+
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb08.png
 
 Generate Nutanix Best Practices Design
 .................
 
-Click **Generate Design**
+Click **Generate Design**.
 
-Click the :fa:`pencil` to change the Design name
+Click the :fa:`pencil` to change the Design name.
 
-.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb09.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb09.png
 
 Fill out the following fields and click **Save**:
 
 - **Custom Design Name** - MSSQLSERVER-UPTICK-WebsiteDB
 
-.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb10.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb10.png
 
-Click **MSSQLSERVER-UPTICK-WebsiteDB**, and you will see the design Details
+Click **MSSQLSERVER-UPTICK-WebsiteDB**, and you will see the design Details.
 
-.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb11.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb11.png
 
-Click **< Back** to go back to the **Design Templates** view
+Click **< Back** to go back to the **Design Templates** view.
 
 Prepare **Xtract Master** VM
 .................
 
-In **Prism > VM**, click ** VM**, then click **Table**
+In **Prism > VM**, click **VM**, then click **Table**.
 
-.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb01.png
-
-Click **+ Create VM**
+Click **+ Create VM**.
 
 Fill out the following fields and click **Save**:
 
@@ -127,146 +146,158 @@ Fill out the following fields and click **Save**:
 - **Disk Image (From Image Service)** - Windows2012
 - **Network** - Primary
 
-Now Power on the **Xtract-DB-2012r2-Master** VM
+Now Power on the **Xtract-DB-2012r2-Master** VM.
 
-Launch Console session to **Xtract-DB-2012r2-Master** VM
+Launch Console session to **Xtract-DB-2012r2-Master** VM.
 
-Set password to **nutanix/4u**
+Set password to **nutanix/4u**.
 
-Install Nutanix Guest Tools, and Restart
+Install Nutanix Guest Tools, and Restart.
 
-Log in and run Windows Update to get the latest updates, and reboot
+Log in and run Windows Update to get the latest updates, and Restart.
 
-shutdown the VM
+shutdown the VM.
 
-Makes sure the **MS SQL Server 2016 ISO** is in **Image Service**
+Makes sure the **MS SQL Server 2016 ISO** is in **Image Service**.
 
-.. Note:: For DHCP based Target VM, use non SysPrepped Template. For Static IP based Target VM, put template in a SysPrepped state.
+  .. Note:: For DHCP based Target VM, use non SysPrepped Template. For Static IP based Target VM, put template in a SysPrepped state.
 
 Deploy new Database VM
 .................
 
-In Xtract for DBs, click **Proceed to Deploy**
+In Xtract for DBs, click **Proceed to Deploy**.
 
-Click **...** under **Actions**, and select **Deploy**
+Click **...** under **Actions**, and select **Deploy**.
 
-.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb12.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb12.png
 
-Ensure you have all the Pre-Requisites, and click **Proceed to Deploy**
+Ensure you have all the Pre-Requisites, and click **Proceed to Deploy**.
 
-.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb13.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb13.png
 
  Fill out the following fields for **Prism Credentials**, and click **Connect**:
 
  - **IP Address** - 10.21.XX.37
  - **Port** - 9440
  - **Username** - admin
- - **Password** - Prism Password
+ - **Password** - *Prism Password*
 
-.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb14.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb14.png
 
-After Hypervisor connection is made, click **Configure VMs**
+After Hypervisor connection is made, click **Configure VMs**.
 
-.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb15.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb15.png
 
 Fill out the following fields and click **Next**:
 
 - **Name** - MSSQL
 - **Container Name** - Databases
-- **Retain clone of master VM on the Container** - Unchecked
+- **Retain clone of master VM on the Container** - Unselected
 - **Network** - Primary
 - **DHCP** - Selected
 
-.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb16.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb16.png
 
 Fill out the following fields and click **Next**:
 
 - **Target VM Master Image** - Xtract-DB-2012r2-Master
 - **Target VM Password** - nutanix/4u
 
-.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb17.png
+Select **Edit TargetVMs to the Domain details**
+
+Fill out the following fields and click **Validate and Save**:
+
+- **Domain Name** - ntnxlad.local
+- **Domain User Name** - administrator@ntnxlab.local
+- **Domain Password** - nutanix/4u
+
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb37.png
+
+Disregard any errors about connecting to the domain.
+
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb17.png
 
 Fill out the following fields and click **Review**:
 
 - **SQL Server Image** - MS SQL Server 2016 ISO
-- **Service Pack (Optional)** - \\\\POCFS\\ISO\\Microsoft\\SQL\\SQLServer2016-KB3210089-x64.exe
+- **Service Pack (Optional)** - ``\\POCFS\ISO\Microsoft\SQL\SQLServer2016-KB3210089-x64.exe``
 
-.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb18.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb18.png
 
-Ensure everything is correct, and click **Deploy**
+Ensure everything is correct, and click **Deploy**.
 
-.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb19.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb19.png
 
-You will see the status of deployment
+You will see the status of deployment.
 
-.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb20.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb20.png
 
-Once complete, click **Proceed to Migrate**
+Once complete, click **Proceed to Migrate**.
 
-.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb21.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb21.png
 
 Migrate Database
 .................
 
 Click **Create a Migration Plan**
 
-.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb22.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb22.png
 
-Click the :fa:`pencil` to update the Plane names
+Click the :fa:`pencil` to update the Plane names.
 
-- **Plane Name** - UptickDB Plan
+- **Plane Name** - UptickDB Plan.
 
-.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb24.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb24.png
 
-Click the :fa:`plus-circle` to select **MSSQLSERVER\MSSQLSERVER**, and click **Next**
+Click the :fa:`plus-circle` to select **MSSQLSERVER\MSSQLSERVER**, and click **Next**.
 
-.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb23.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb23.png
 
-If\When it asks you for a File Share add the following, and click **Save and Start the Plan**
+If\When it asks you for a File Share add the following, and click **Save and Start the Plan**.
 
-- **Server File Path** - \\\\10.21.64.53\\xdb
+- **Server File Path** - ``\\10.21.64.53\xdb``
 
-.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb25.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb25.png
 
-Click **Proceed** to launch the **Migration**
+Click **Proceed** to launch the **Migration**.
 
-.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb26.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb26.png
 
-You may see a pop-up stating that the versions do not match, and it is proceeding (will use the service pack you uploaded)
+You may see a pop-up stating that the versions do not match, and it is proceeding (will use the service pack you uploaded).
 
-.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb27.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb27.png
 
- When you see the status change to **Ready for Cutover**, Click the **Action** dropdown and click **Cutover Databases**
+ When you see the status change to **Ready for Cutover**, Click the **Action** dropdown and click **Cutover Databases**.
 
- .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb28.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb28.png
 
- Click **Proceed** to launch the **Cutover**
+ Click **Proceed** to launch the **Cutover**.
 
- .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb29.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb29.png
 
  You may see some pop-up messages like these, go ahead and close them.
 
-.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb30.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb30.png
 
- When you see the status change to **Ready for Re-Balancing**, Click the **Action** dropdown and click **Initiate Post Cutover Processing**
+ When you see the status change to **Ready for Re-Balancing**, Click the **Action** dropdown and click **Initiate Post Cutover Processing**.
 
-.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb31.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb31.png
 
-Check **Re-Balance Data in Databases**, and click **Start**
+Check **Re-Balance Data in Databases**, and click **Start**.
 
-.. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb32.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb32.png
 
- When you see the status change to **Ready for Final Processing**, Click the **Action** dropdown and click **Initiate Data Cleanup**
+ When you see the status change to **Ready for Final Processing**, Click the **Action** dropdown and click **Initiate Data Cleanup**.
 
- .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb33.png
+   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb33.png
 
- Click **Proceed** to launch the **Cleanup**
+ Click **Proceed** to launch the **Cleanup**.
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb34.png
 
-When everything is done, you will see status of **Completed**
+When everything is done, you will see status of **Completed**.
 
- .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb35.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb35.png
 
 Conclusions
 +++++++++++
