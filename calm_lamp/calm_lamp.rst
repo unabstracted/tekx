@@ -16,7 +16,7 @@ Estimated time to complete: **50mins**
 - PdM:  Jasnoor Gill
 - Solutions: Mark Lavi, Andy Schmid
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab2/image1.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab2/image1.png
 
 
 Calm Glossary
@@ -43,7 +43,7 @@ Getting Familiar with the Tools:
 
 For now, let’s step through each tab:
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab2/image2.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab2/image2.png
 
 Creating a Web Server
 *****************************
@@ -123,7 +123,7 @@ Since we need the DB IP Address to bring up the AppServer, we need to add a **De
 11. This tells Calm to hold running the script until the **MYSQL** service is up.
 12. **Save** the blueprint, then click on the **Create** action from the **Overview** pane to see this.
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab2/image11.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab2/image11.png
 
 Scale-out AppService
 ====================
