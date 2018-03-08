@@ -16,7 +16,7 @@ Estimated time to complete: **50mins**
 - PdM:  Jasnoor Gill
 - Solutions: Mark Lavi, Andy Schmid
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab2/image1.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab2/image1.png
 
 
 Calm Glossary
@@ -43,7 +43,7 @@ Getting Familiar with the Tools:
 
 For now, let’s step through each tab:
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab2/image2.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab2/image2.png
 
 Creating a Web Server
 *****************************
