@@ -5,6 +5,7 @@
 
 .jumbotron.branded h2 {
     color: #23272e;
+    font-weight: 600;
 }
 
 .jumbotron.branded::before {
