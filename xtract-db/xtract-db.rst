@@ -154,6 +154,8 @@ Set password to **nutanix/4u**.
 
 Install Nutanix Guest Tools, and Restart.
 
+Disable the Windows Firewall Service
+
 Log in and run Windows Update to get the latest updates, and Restart.
 
 shutdown the VM.
@@ -203,7 +205,14 @@ Fill out the following fields and click **Next**:
 - **Target VM Master Image** - Xtract-DB-2012r2-Master
 - **Target VM Password** - nutanix/4u
 
-Select **Edit TargetVMs to the Domain details**
+Select **Enter Account Credentials**
+
+Fill out the following fields and click **Next**:
+
+- **Domain Account Name** - ntnxlab\adminuser01
+- **Password** - nutanix/4u
+
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb38.png
 
 Fill out the following fields and click **Validate and Save**:
 
@@ -247,15 +256,15 @@ Click the :fa:`pencil` to update the Plane names.
 
 - **Plane Name** - UptickDB Plan.
 
-  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb24.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb23.png
 
 Click the :fa:`plus-circle` to select **MSSQLSERVER\MSSQLSERVER**, and click **Next**.
 
-  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb23.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb24.png
 
-If\When it asks you for a File Share add the following, and click **Save and Start the Plan**.
+If/When it asks you for a File Share add the link to the share on the MSSQL Server, and click **Save and Start the Plan**.
 
-- **Server File Path** - ``\\10.21.64.53\xdb``
+- **Server File Path Example** - ``\\10.21.64.54\xdb``
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb25.png
 
