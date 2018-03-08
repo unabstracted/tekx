@@ -43,7 +43,7 @@ Upon accessing App management you will notice a new ribbon along the left - this
 
 For now, let’s step through each tab:
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab1/image2.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab1/image2.png
 
 Blueprint Editor Overview
 =========================
