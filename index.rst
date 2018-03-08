@@ -17,6 +17,8 @@
   calm_mrkt_p1/calm_marketplace_p1
   calm_mrkt_p2/calm_marketplace_p2
   calm_mssql/calm_mssql
+  git/gitlab
+  github/github
   xtract-vm/xtract-vm
   xtract-db/xtract-db
   xray/index
@@ -27,8 +29,6 @@
   :name: _opt-labs
   :hidden:
 
-  git/gitlab
-  github/github
   afs/index
   citrix/index
   hycu/index
