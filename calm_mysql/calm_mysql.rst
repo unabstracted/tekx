@@ -106,7 +106,7 @@ In this subsection we'll create some variables. It’s not necessary to do it at
 
 - Variables can be referred to while configuring VMs using the **@@{variable\_name}@@** construct - Calm will evaluate and replace that string before sending it down to the VM.
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab1/image8.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab1/image8.png
 
 
 **Setup the variables as specified in the table below:**
@@ -228,7 +228,7 @@ Now that the blueprint has been created and saved, you can launch it!
 
 - This will now bring you to the **Instance** page. The bar across the top allows you to see various information about the application instance:
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab1/image25.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab1/image25.png
 
 
 Takeaways
@@ -240,10 +240,10 @@ Takeaways
 
 .. |image0| image:: lab1/media/image1.png
 .. |image1| image:: lab1/media/image2.png
-.. |image2| image:: http://s3.nutanixworkshops.com/calm/lab1/image3.png
+.. |image2| image:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab1/image3.png
 .. |image3| image:: lab1/media/image4.png
 .. |image4| image:: lab1/media/image5.png
-.. |image5| image:: http://s3.nutanixworkshops.com/calm/lab1/image6.png
+.. |image5| image:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab1/image6.png
 .. |image6| image:: lab1/media/image7.png
 .. |image7| image:: lab1/media/image8.png
 .. |image10| image:: lab1/media/image11.png
