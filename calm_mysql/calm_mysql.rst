@@ -50,11 +50,11 @@ Blueprint Editor Overview
 
 Welcome to the Blueprint Editor! Let’s take a look at the interface.
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab1/image4.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab1/image4.png
 
 There are 2 more buttons that are helpful to use while making a blueprint:
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab1/image5.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab1/image5.png
 
 
 Your Entry Level Blueprint
