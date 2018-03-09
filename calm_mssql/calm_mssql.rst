@@ -12,6 +12,7 @@ Estimated time to complete: **20mins**
 
 **Product Feature Reseources**
 
+- slack: #calm
 - PdM: Jasnoor Gill
 - Solutions: Mark Lavi, Andy Schmid
 
@@ -37,7 +38,7 @@ Download the MSSQL Blueprint by clikcing the link provided below:
 
 From Apps (NuCalm) within Prism Central, navigate to the Blueprint Workspace by clicking (|image1|) icon located on the left tool ribbon.  This will open the Blueprint Workspace where self-authored blueprints are staged for editing, publishing, and/or launching as Applications.  When the Blueprint grid appears, click the **Upload Blueprint** button located along the top of the Blueprint grid.
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab3/image2.png
+.. figure:: https://s3.amazonaws.com//s3.nutanixworkshops.com/calm/lab3/image2.png
 
 Navigate to the blueprint file (i.e. *Troubleshooting.json*) recently downloaded and select it by clicking on the file.
 
@@ -46,7 +47,7 @@ A modal dialog will appear prompting for a name and project when saving. Complet
 - **Name:** Calm Workshop Blueprint Debug
 - **Project:** Calm
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab3/image3.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab3/image3.png
 
 Assign Credential
 =================
@@ -101,7 +102,7 @@ Launch Blueprint
 ================
 Once the blueprint has been successfully updated and saved, click the (|image5|) button to lanuch the Blueprint.  Name the application with *Calm Workshop Troubleshooting*.
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab3/image6.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab3/image6.png
 
 
 Click **Create** to launch the application.
@@ -119,5 +120,5 @@ Takeaways
 
 .. _karan-setup: ../karan/karan_setup.html
 
-.. |image1| image:: http://s3.nutanixworkshops.com/calm/lab3/image1.png
-.. |image5| image:: http://s3.nutanixworkshops.com/calm/lab3/image5.png
+.. |image1| image:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab3/image1.png
+.. |image5| image:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab3/image5.png

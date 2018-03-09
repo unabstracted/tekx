@@ -20,6 +20,7 @@ Estimated time to completion: **40mins**
 
 **Product Feature Resource(s)**
 
+- slack: #calm
 - PdM:  Jasnoor Gill
 - Solutions: Mark Lavi, Andy Schmid
 
@@ -46,22 +47,22 @@ Users are dropped into the Applications tab by default, and can see all the appl
 
 **Tab review:**
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab8/image2.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab8/image2.png
 
 Blueprint Workspace - Publish Blueprints
 ************************************************
 
 Navigate to the *Blueprint Workspace* by clicking (|image1|) icon located on the left tool ribbon.  This will open the Blueprint Workspace where self-authored blueprints are staged for editing, publishing, or launching as an application.
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab8/image17.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab8/image17.png
 
 Select an *Active* working Blueprint by clicking on the *Name* and opening the workspace.  With the workspace open, Click the |image3| action located at the top of the Blueprint workspace tool bar.
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab8/image15.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab8/image15.png
 
 A modal dialog will appear.  Verify the *Name* and *Description*, and click the Publish button.
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab8/image18.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab8/image18.png
 
 
 Marketplace Manager - Approve Blueprint
@@ -73,11 +74,11 @@ Navigate to the Marketplace Manager by clicking (|image6|) icon located on the l
 
 To approve the Blueprint, click the *Approval Pending* action located along the top tool-bar of the *Marketplace Manager*.
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab8/image19.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab8/image19.png
 
 Click the checkbox to the left of the *Blueprint Name*.
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab8/image20.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab8/image20.png
 
 You can choose to reject, approve, or launch the blueprint.
 
@@ -87,20 +88,20 @@ You can choose to reject, approve, or launch the blueprint.
 
 Click *Approve* to approve the Bluerpint for publication.  Once the application has been successfully approved, assign the **Category** and **Project Shared With** as shown below and click **Apply**.
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab8/image21.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab8/image21.png
 
 Click **Publish** to publish the Blueprint to the Marketplace. Once the Blueprint has been successfully published, the dialog should appear as follows:
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab8/image22.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab8/image22.png
 
 
 Verify the Blueprint's publication status by clicking on the **Marketplace Blueprints** action located in the tool-bar along the top of the **Marketplace Manager**.  Scroll through the Blueprints to find your Blueprint
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab8/image23.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab8/image23.png
 
 Navigate to the Marketplace by clicking (|image6|) icon located on the left tool ribbon.  This will open the Marketplace where Blueprints are staged for collaboration and launching as an application.
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab8/image24.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab8/image24.png
 
 Edit Project Workspace
 ******************************
@@ -112,7 +113,7 @@ Before a Bluerpint can be launched from the Marketplace the Project's Environmen
 
 This can be done in the Projects Manager. Navigate to the the Projects Manager by clicking the(|image13|)icon located on the left tool ribbon.  This will open the Projects Manager where projects are persisted.
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab8/image26.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab8/image26.png
 
 Click the Project name associated with or assigned to with Blueprint during publication.  For this exercise the project is **Calm**.
 
@@ -121,7 +122,7 @@ To assign a user and a network to the Project, click the **Environment** action 
 - **Network:**  *bootcamp*
 - **Credentials**: *user: root*, *password: nutanix/4u*
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab8/image27.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab8/image27.png
 
 Once configured, click save.
 
@@ -130,25 +131,25 @@ Launch Blueprint from the Marketplace
 
 Navigate to the Marketplace by clicking (|image6|) icon located on the left tool ribbon.  This will open the Marketplace. Once Marketplace is displayed, the Blueprint icon published from previous steps should be visible...
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab8/image24.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab8/image24.png
 
 
 Click the Blueprint Icon associated with the previous **Publish** exercises/steps and then click **Launch** to deploy the Blueprint as an application.
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab8/image28.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab8/image28.png
 
 
 A Modal dialog will appear allowing you to select the project.  Select the **Calm** Project and click *Launch*.
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab8/image29.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab8/image29.png
 
 Assign a name to the Applcation and click *Create*
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab8/image30.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab8/image30.png
 
 Monitor the execution of the Applciation until complete.
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab8/image31.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab8/image31.png
 
 Takeaways
 *********
@@ -158,9 +159,9 @@ Takeaways
 
 
 .. |image0| image:: lab8/media/image2.png
-.. |image1| image:: http://s3.nutanixworkshops.com/calm/lab8/image14.png
+.. |image1| image:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab8/image14.png
 .. |image2| image:: lab8/media/image17.png
-.. |image3| image:: http://s3.nutanixworkshops.com/calm/lab8/image16.png
+.. |image3| image:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab8/image16.png
 .. |image4| image:: lab8/media/image15.png
 .. |image5| image:: lab8/media/image18.png
 .. |image6| image:: http://s3.nutanixworkshops.com/calm/lab8/image10.png

@@ -27,6 +27,12 @@ NTNX REST API Explorer Requests:
 
 Estimated time to complete: **2.5hrs**
 
+**Product Feature Reseources**
+
+- slack: #sme_devops
+- PdM: Tarak Parekh
+- Solutions: Andy Schmid
+
 Requirements:
 *************
 
@@ -132,7 +138,7 @@ A link for launching the REST API Explorer may not be accessible via Prism Centr
   https://[PC-IPADDRESS]:9440/api/nutanix/v3/api_explorer/index.html
 
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab5/image1.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab5/image1.png
 
 Once the API Explorer appears, be sure to authenticate or sign-in (as shown above) using the PC credentials.  Click **Explorer** to authenicate.  The explorer should refresh and display the REST API Targets + requests.
 
@@ -167,15 +173,15 @@ All *list* requests require a small payload.  The following is the minimal paylo
 
 1. Navigate the REST API Explorer, find *app* and expand by clicking *List Operations*.
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab5/image7.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab5/image7.png
 
 2. Find **POST** */apps/list* and click to expand.  Copy the JSON code block shown above and paste it in the *get_entities_request*.
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab5/image8.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab5/image8.png
 
 3. Click *Try it out!* to execute the **POST** */apps/list Request*...  A *Response Code* of 200 indicates the request was successfully executed:
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab5/image11.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab5/image11.png
 
 4. Valid content should be accessible in the **Response Body**. Each *app* element and associated information is enclosed within several objects (i.e. *status* , *metadata*, and *spec*).  Scroll through the contents and take a mental inventory to better understand what information is made available for an *app* in the */apps/list* request.
 
@@ -234,11 +240,11 @@ In this section we'll learn how to Navigate the REST API Explorer to read and ga
 
 2. Navigate the REST API Explorer, find *app* and expand by clicking *List Operations*.
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab5/image7.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab5/image7.png
 
 3. Find **GET** */apps/{uuid}* and click to expand.  Paste the *uuid* copied from step 1 into the value txt-field of the *uuid* paramater field for the **GET** /apps/{uuid}.
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab5/image18.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab5/image18.png
 
 4. Click *Try it out!* to execute the **GET** */apps/{uuid} Request*...  A *Response Code* of 200 indicates the request was successfully executed.
 
@@ -297,19 +303,19 @@ In this section we'll Navigate the REST API Explorer to execute importing a blue
 
 1. Start by opening the file contents from: Import-Blueprint.JSON_, and paste it to the Chrome JSON Editor (Chrome-JSON-Editor-Extension_). Once it's pasted, click (|image9|) to migrate the json to a node-structure.
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab5/image20.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab5/image20.png
 
 2. Remove the **status** content by right-clicking on the Node *Status*.  Select **Remove** from the menu.
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab5/image21.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab5/image21.png
 
 3. Insert an *object* to **metadata** by right-clicking on the Node *metadata*.  Select *insert* and then *object*.
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab5/image22.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab5/image22.png
 
 4. Name the object *project_reference*. Add 2 *string* members to the *project_reference* object by right-clicking on the node and select *append*.
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab5/image23.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab5/image23.png
 
 5. Name the **key/value** pairs as *kind:project*, and *uuid:[UUID for Calm Project]*.  Retrieving the the Calm project uuid as follows:
 
@@ -328,21 +334,21 @@ In this section we'll Navigate the REST API Explorer to execute importing a blue
 
 - The object *project_reference* object should look similar to the following:
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab5/image24.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab5/image24.png
 
 6. The *project_reference* object should be positioned under *metadata* node.  Expand the *metadata* node check to make sure this is the case.  If it doesn't, perform a **click-hold** on (|image15|) icon to the left of *project_reference* object and drag it under *metdata* node.  It should look as follows:
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab5/image26.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab5/image26.png
 
 7. Modify the name of the blueprint under the *spec* object.  Expand the *spec* object, and edit *name* with *Import_API_Lab*
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab5/image27.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab5/image27.png
 
 8. If all looks good, click the (|image18|) button to migrate the changes/updates made in the right **node** view panel to the left JSON view panel.
 
 9. Select the entire JSON contents shown in the left JSON view panel and copy it to the Blueprint **POST** */blueprints/import_json* *body* within the v3 REST API Explorer.
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab5/image29.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab5/image29.png
 
 10. Click *Try it out!* to invoke the **POST** */blueprints/import_json* request.
 
@@ -364,7 +370,7 @@ In this section we'll Navigate the REST API Explorer to execute importing a blue
 
 15. Refresh Prism Central and check Apps/Blueprints to insure the blueprint succesfully imported...
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab5/image30.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab5/image30.png
 
 Summary
 ==========
@@ -406,7 +412,7 @@ Workflow
 
 8. Expand the JSON node structure  and make the edits as shown below:
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab5/image39.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab5/image39.png
 
 9. If all looks good, click the (|image18|) button to migrate the changes/updates made in the right **node** view panel to the left JSON view panel.
 
@@ -449,37 +455,37 @@ Workflow
 
 5. Copy the entire *Response Body* from the Blueprint **GET** */blueprints/{uuid}* API request and paste it to the Chrome JSON Editor (Chrome-JSON-Editor-Extension_). Once it's pasted, click (|image9|) to migrate the json to a node-structure.
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab5/image31.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab5/image31.png
 
 6. Remove the **status** content by right-clicking on the Node *Status*.  Select **Remove** from the menu.
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab5/image21.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab5/image21.png
 
 7. Expand the *spec* node and change the key/value pair from *name:Import_API_Lab* to *application_name:Launch_API_Lab*
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab5/image32.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab5/image32.png
 
 8. Insert an *object* to **spec** by right-clicking on the Node *resources*.  Select *insert* and then *object*.
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab5/image33.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab5/image33.png
 
 9. Name the object *app_profile_reference*. Add 2 key/value pairs as *string* members to the *app_profile_reference* object by right-clicking on the node and select *append*, and then *string*.
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab5/image34.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab5/image34.png
 
 10.  Name the key/values *kind:app_profile* and *uuid:[UUID of APP Profile]*. **NOTE:** You find the *uuid* of the *app_profile* by expanding the *resources* node.  Copy the *uuid* and past it to the *uuid* field of the *app_profile_reference* object.
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab5/image35.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab5/image35.png
 
 11. The JSON Node(s) should appear as follows:
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab5/image36.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab5/image36.png
 
 12. If all looks good, click the (|image18|) button to migrate the changes/updates made in the right **node** view panel to the left JSON view panel.
 
 13. Select the entire JSON contents shown in the left JSON view panel and copy it to the Blueprint **POST** */blueprints/{uuid}/launch*  *Body* within the v3 REST API Explorer.  You'll also be required to copy the blueprint *uuid* to the *uuid* field as shown below:
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab5/image37.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab5/image37.png
 
 14. Click *Try it out!* to invoke the **POST** */blueprints/{uuid}/launch* request.
 
@@ -501,7 +507,7 @@ Workflow
 
 19. Refresh Prism Central and check Apps/apps to insure the blueprint succesfully launched...
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab5/image38.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab5/image38.png
 
 .. note:: The response of 200 is expected indicating the launch was successful. The application provisioning will most likely fail and is expected.  The reason for the provisioning failure is due to the images being referenced on the cluster are different from where the blueprint was originally sourced.  The key takeway here is that it launched...
 
@@ -681,16 +687,16 @@ Takeaways
 .. |image7| image:: lab5/media/image9.png
 .. |image8| image:: lab5/media/image18.png
 
-.. |image9| image:: http://s3.nutanixworkshops.com/calm/lab5/image19.png
+.. |image9| image:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab5/image19.png
 .. |image10| image:: lab5/media/image20.png
 .. |image11| image:: lab5/media/image21.png
 .. |image12| image:: lab5/media/image22.png
 .. |image13| image:: lab5/media/image23.png
 .. |image14| image:: lab5/media/image24.png
-.. |image15| image:: http://s3.nutanixworkshops.com/calm/lab5/image25.png
+.. |image15| image:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab5/image25.png
 .. |image16| image:: lab5/media/image26.png
 .. |image17| image:: lab5/media/image27.png
-.. |image18| image:: http://s3.nutanixworkshops.com/calm/lab5/image28.png
+.. |image18| image:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab5/image28.png
 .. |image19| image:: lab5/media/image29.png
 .. |image20| image:: lab5/media/image30.png
 .. |image21| image:: lab5/media/image31.png
