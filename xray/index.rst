@@ -1,6 +1,6 @@
--------------------
+-----
 X-Ray
--------------------
+-----
 
 Overview
 ++++++++
@@ -23,8 +23,6 @@ X-Ray is an automated testing application for virtualized infrastructure solutio
   perform well with mixed workloads.
 - **Feature Set Implications**
   X-Ray tests use standard APIs throughout tests to clone and manage VMs, take snapshots, and perform other system manipulations. Systems should perform efficiently while using features intended for virtualized infrastructure.
-
-X-Ray is a key tool for differentiating the superior architecture of Nutanix compared to platforms such as VSAN, HyperFlex, and Simplivity. X-Ray uses industry standard load generation tools such as **fio** and transparent/modifiable test cases to build customer confidence in test results. In the same way Nutanix elevates conversation above basic HCI to focus on the real impacts of the Enterprise Cloud, X-Ray elevates conversations around platform evaluation and can act as key, measurable success criteria for POCs. X-Ray can also be used in non-competitive situations to build customer confidence in the Nutanix platform and potential grow deal sizes and take on additional workloads.
 
 Getting Engaged with the Product Team
 .....................................
@@ -209,7 +207,9 @@ In this scenario we see a slight impact to Nutanix (green) OLTP IOPS immediately
 Takeaways
 +++++++++++
 
-  - Best practice is to deploy X-Ray on an external system
-  - X-Ray doesn't require complex network configuration and can be used with or without DHCP
-  - Multiple X-Ray tests can be queued simultaneously
-  - Or key differentiators
+  - Best practice is to deploy X-Ray on an external system.
+  - X-Ray doesn't require complex network configuration and can be used with or without DHCP.
+  - X-Ray is a key tool for differentiating the superior architecture of Nutanix compared to platforms such as VSAN, HyperFlex, and Simplivity.
+  - X-Ray uses industry standard load generation tools such as **fio** and transparent/modifiable test cases to build customer confidence in test results.
+  - In the same way Nutanix elevates conversation above basic HCI to focus on the real impacts of the Enterprise Cloud, X-Ray elevates conversations around platform evaluation and can act as key, measurable success criteria for POCs.
+  - X-Ray can also be used in non-competitive situations to build customer confidence in the Nutanix platform and potential grow deal sizes and take on additional workloads.
