@@ -35,15 +35,15 @@ Installing MCS Plugin for AHV
 
 In the **XD** VM console, open ``C:\MCS-Plugin\NutanixAcropolix-MCS-XD7.9_or_later.msi`` and click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab3/12.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab3/12.png
 
 Select **I accept the terms in the License Agreement** and click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab3/13.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab3/13.png
 
 Click **Next > Install > Finish**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab3/16.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab3/16.png
 
 .. note:: In a production environment where you would typically have 2+ XenDesktop Delivery Controllers for high availability, you would install the MCS plugin on each Delivery Controller.
 
@@ -52,23 +52,23 @@ Configuring XenDesktop Site
 
 In the **XD** VM console, open **Citrix Studio** from the Start Menu.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab3/28.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab3/28.png
 
 After launching Citrix Studio for the first time, you'll be prompted with three different options to configure your newly installed Delivery Controller. Click **Deliver applications and desktops to your users**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab3/17.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab3/17.png
 
 Select **A fully configured, production-ready Site**, specify a **Site name** and click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab3/18.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab3/18.png
 
 A local SQL Express instance will be used for this exercise. In a production environment these databases would be hosted on an external, highly available SQL Server instance. Click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab3/19.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab3/19.png
 
 Select **Use the free 30-day trial** and click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab3/20.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab3/20.png
 
 Fill out the following fields to configure the connection to your AHV cluster and click **Next**:
 
@@ -79,7 +79,7 @@ Fill out the following fields to configure the connection to your AHV cluster an
   - **Connection Name** - *A friendly name for the connection, such as your Nutanix cluster name*
   - **Create virtual machines using** - Studio tools (Machine Creation Services)
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab3/21b.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab3/21b.png
 
 .. note::
 
@@ -87,27 +87,27 @@ Fill out the following fields to configure the connection to your AHV cluster an
 
 Specify a name for the network and storage resources for the cluster (e.g. the Nutanix cluster name), and select the IPAM enabled **Secondary** network. This will be the DHCP pool used by provisioned desktops and XenApp servers.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab3/22b.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab3/22b.png
 
 The workshop will not explore Citrix's AppDNA or App-V Publishing features, so both can be left unselected. Click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab3/23.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab3/23.png
 
 Review selections and click **Finish** to start site creation.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab3/24b.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab3/24b.png
 
 Once complete, Studio will indicate that configuration was successful. The process takes approximately 3 minutes.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab3/25.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab3/25.png
 
 Selecting the **PowerShell** tab will detail all the steps taken by the Site Creation Wizard.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab3/26.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab3/26.png
 
 Select **Citrix StoreFront > Stores** and review the configuration.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab3/27b.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab3/27b.png
 
 Creating the Gold Image
 +++++++++++++++++++++++
@@ -123,22 +123,22 @@ In **Prism > VM**, click **+ Create VM** and fill out the following fields:
   - **Number of Cores per vCPU** - 1
   - **Memory** - 4
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab4/1.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab4/1.png
 
-Click **+ Add New Disk** and fill out the following fields:
+Click **+ Add New Disk**, fill out the following fields, and click **Add**:
 
   - **Type** - DISK
   - **Operation** - Clone from Image Service
   - **Bus Type** - SCSI
   - **Image** - *Windows 10 Disk Image*
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab4/2.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab4/2.png
 
-Click **Add**.
+Click **Add New NIC**. fill out the following fields, and click **Add**:
 
-Click **Add New NIC**.
+  - **VLAN Name** - Secondary
 
-Select **Secondary** from the **VLAN Name** drop down menu and click **Add**. Click **Save**.
+Click **Save**.
 
 In **Prism > VM > Table**, select the **W10-Gold** VM and click **Power on**.
 
@@ -156,27 +156,27 @@ Complete the Microsoft Out of Box Experience (OOBE) wizard:
 
   - Set all features to **Off** and click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab4/3.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab4/3.png
 
   - Set all features to **Off** and click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab4/4.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab4/4.png
 
   - Set all features to **Off** and click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab4/5.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab4/5.png
 
   - Select **Join a local Active Directory domain** and click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab4/6.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab4/6.png
 
   - Create an account, **LocalUser**, and click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab4/7.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab4/7.png
 
   - Click **Not Now** to disable Cortana.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab4/8.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab4/8.png
 
   - Click **Next**.
 
@@ -187,7 +187,7 @@ Installing Applications
 
 In the **W10-Gold** VM console, install a few applications such as Google Chrome, text editors, etc.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab4/10.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab4/10.png
 
 Disable Windows Updates for your gold image by opening **Control Panel > Administrative Tools > Services**.
 
@@ -195,7 +195,7 @@ Right-click **Windows Update > Properties**.
 
 Select **Disabled** from the **Startup type** down down menu.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab4/11.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab4/11.png
 
 Click **Stop**.
 
@@ -208,70 +208,70 @@ In **Prism > VM > Table**, select the **W10-Gold** VM and click **Update**.
 
 Under **Disks > CD-ROM**, click :fa:`pencil`.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab4/12.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab4/12.png
 
 Fill out the following fields and click **Update**:
 
   - **Operation** - Clone from Image Service
   - **Image** - *XenDesktop installation .iso*
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab4/13.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab4/13.png
 
 Click **Save**.
 
 In the **W10-Gold** VM console, open the XenDesktop Installer and click the **Start** button to the right of **XenDesktop**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab4/14.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab4/14.png
 
 Click **Virtual Delivery Agent for Windows Desktop OS**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab4/15.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab4/15.png
 
 Select **Create a Master Image** and click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab4/16.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab4/16.png
 
 Select **No, install VDA in standard mode** and click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab4/17.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab4/17.png
 
 Select **Citrix Receiver** and click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab4/18.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab4/18.png
 
 Select all **Additional Components** and click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab4/19.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab4/19.png
 
 Select **Let Machine Creation Services do it automatically** from the drop down menu and click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab4/20.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab4/20.png
 
 Select **Optimize performance** (`CTX125874 <https://support.citrix.com/article/CTX125874>`_) and click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab4/21.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab4/21.png
 
 Select **Automatically** to allow the installer to configure the Windows Firewall service to allow traffic for selected XenDesktop components.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab4/22.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab4/22.png
 
 Review selections and click **Install**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab4/23.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab4/23.png
 
 Select **I do not want to participate in Call Home** and click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab4/24.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab4/24.png
 
 Click **Finish** and wait for the VM to restart.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab4/25.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab4/25.png
 
 In **Prism > VM > Table**, select the **W10-Gold** VM and click **Update**.
 
 Under **Disks > CD-ROM**, click :fa:`eject` to unmount the XenDesktop installation .iso.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab4/26.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab4/26.png
 
 Click **Save**.
 
@@ -284,7 +284,7 @@ In **Prism > VM > Table**, select the **W10-Gold** VM and click **Power Off Acti
 
 Select **Guest shutdown** and click **Submit** to gracefully shut down the VM.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab4/27.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab4/27.png
 
 Once **W10-Gold** is powered off, select the VM and click **Take Snapshot**
 
@@ -302,31 +302,31 @@ In the **XD** VM console, open **Citrix Studio**.
 
 Right-click **Machine Catalogs > Create Machine Catalog**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/1.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab6/1.png
 
 Click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/2.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab6/2.png
 
 Select **Desktop OS** and click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/3.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab6/3.png
 
 Select **Machines that are power managed** and **Citrix Machine Creation Services**. Click **Next**
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/4.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab6/4.png
 
 Select **Random** and click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/5.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab6/5.png
 
 Select your Nutanix storage container and click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/6b.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab6/6b.png
 
 Select your **W10-Gold** snapshot and click **Next**. These snapshots will continue to exist as long as there are provisioned virtual desktops utilizing them.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/7b.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab6/7b.png
 
 Fill out the following fields and click **Next**:
 
@@ -335,11 +335,11 @@ Fill out the following fields and click **Next**:
   - **Virtual CPUs** - 2
   - **Cores per vCPU** - 1
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/8.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab6/8.png
 
 Select **Create new Active Directory accounts**. Under the **NTNXLAB.local** domain, select the **Default OU** OU. Specify **W10NP-###** as the **Account naming scheme**. Click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/ts18/citrix/lab6/9b.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/citrix/lab6/9b.png
 
 .. note::
 
@@ -347,7 +347,7 @@ Select **Create new Active Directory accounts**. Under the **NTNXLAB.local** dom
 
 Specify a friendly **Machine Catalog name** and click **Finish**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/10.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab6/10.png
 
 .. note::
 
@@ -361,11 +361,11 @@ Specify a friendly **Machine Catalog name** and click **Finish**.
 
 Observe the Machine Catalog creation process in **Prism**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/11.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab6/11.png
 
 Upon completion, view the details of the Machine Catalog in **Citrix Studio**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/12.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab6/12.png
 
 .. note::
 
@@ -387,27 +387,27 @@ Delivery Groups are collections of machines from one or more Machine Catalogs. T
 
 Right-click **Delivery Groups > Create Delivery Group**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/13.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab6/13.png
 
 Click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/14.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab6/14.png
 
 Select your **Non-Persistent** Machine Catalog and specify the maximum number of VMs available for the Delivery Group.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/15.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab6/15.png
 
 Select **Restrict** and click **Add**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/16.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab6/16.png
 
 Specify **SSP Basic Users** in the **Object names** field and click **OK > Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/ts18/citrix/lab6/17b.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/citrix/lab6/17b.png
 
 Click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/19.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab5/19.png
 
 Click **Add** and fill out the following fields:
 
@@ -416,27 +416,27 @@ Click **Add** and fill out the following fields:
   - Select **Allow everyone with access to this Delivery Group**
   - Select **Enable desktop assignment rule**
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/20.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab6/20.png
 
 Click **OK > Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/21.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab6/21.png
 
 Specify a friendly name for the Delivery Group and click **Finish**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/22b.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab6/22b.png
 
 Following creation of the pool, observe in **Prism** that 1 of the **W10P-###** VMs been has powered on.
 
 In **Citrix Studio**, right-click your Delivery Group and click **Edit Delivery Group**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/23.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab6/23.png
 
 Select **Power Management** from the left hand menu.
 
 Click and drag the number of machines powered on during peak hours from 1 to 4. The peak hours period can optionally be modified by clicking and dragging to either the left or the right.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/24.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab6/24.png
 
 .. note:: For more granular control of registered, powered on VMs you can click the Edit link and provide the number or percentage of VMs you want available for every hour of the day. You can also configure the disconnected VM policy to free up disconnected VMs after a configurable time out period, returning the desktop to the pool for another user.
 
@@ -444,7 +444,7 @@ After increasing the number of powered on virtual machines, validate the **W10NP
 
 In **Citrix Studio**, right-click your Delivery Group and click **View Machines**. Alternatively you can double-click on the name of the Delivery Group.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/26.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab5/26.png
 
 Observe the powered on desktop now appears as **Registered** with the Delivery Controller, indicating the desktop is ready for user connection.
 
@@ -455,11 +455,11 @@ Open \http://<*XD-VM-IP*>/Citrix/StoreWeb in a browser on the same L3 LAN as you
 
 If prompted, click **Detect Receiver**
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/27.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab5/27.png
 
 If Citrix Receiver is not installed, select **I Agree with the Citrix license agreement** and click **Download**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/28.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab5/28.png
 
 Launch the **CitrixReceiverWeb.exe** installer and complete the installation wizard using default settings.
 
@@ -469,19 +469,19 @@ Refresh your browser or click the **Detect again** link.
 
 If prompted, select **Always open these types of links in the associated app** and click **Open Citrix Receiver Launcher**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/29.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab5/29.png
 
 .. note:: This may appear slightly different depending on your browser (Chrome shown). You want to allow your browser to open the Citrix Receiver application.
 
 Refresh your browser and log in to StoreFront as **NTNXLAB\\basicuser01**
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/25b.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab6/25b.png
 
 .. note:: If you're still being prompted to detect Citrix Receiver, click **Already installed** to proceed to the login page.
 
 Select the **Desktops** tab and observe your **Pooled Windows 10 Desktop** is available. Click the **Pooled** desktop to launch the session.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/26b.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab6/26b.png
 
 After the virtual desktop has completed logging in, experiment by changing application settings, installing applications, restarting the VM, and logging in again.
 
@@ -495,31 +495,31 @@ In the **XD** VM console, open **Citrix Studio**.
 
 Right-click **Machine Catalogs > Create Machine Catalog**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/1.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab5/1.png
 
 Click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/2.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab5/2.png
 
 Select **Desktop OS** and click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/3.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab5/3.png
 
 Select **Machines that are power managed** and **Citrix Machine Creation Services**. Click **Next**
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/4.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab5/4.png
 
 Select **Static** and **Yes, create a dedicated virtual machine**. Click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/5.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab5/5.png
 
 Select your Nutanix storage container and click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab6/6b.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab6/6b.png
 
 Select your **W10-Gold** snapshot and click **Next**. Note the XDSNAP* snapshot listed from the Preparation VM created by the non-persistent Machine Catalog previously.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/7b.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab5/7b.png
 
 Fill out the following fields and click **Next**:
 
@@ -528,46 +528,46 @@ Fill out the following fields and click **Next**:
   - **Virtual CPUs** - 4
   - **Cores per vCPU** - 1
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/8.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab5/8.png
 
 Select **Create new Active Directory accounts**. Under the **NTNXLAB.local** domain, select the **Default OU** OU. Specify *W10P-###* as the **Account naming scheme**. Click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/ts18/citrix/lab5/9b.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/citrix/lab5/9b.png
 
 Specify a friendly **Machine Catalog name** and click **Finish**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/10.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab5/10.png
 
 Upon completion, view the details of the Machine Catalog in **Citrix Studio**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/15.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab5/15.png
 
 Creating the Delivery Group
 ...........................
 
 Right-click **Delivery Groups > Create Delivery Group**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/16.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab5/16.png
 
 Click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/17.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab5/17.png
 
 Select your **Persistent** Machine Catalog and specify the maximum number of VMs available for the Delivery Group.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/18.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab5/18.png
 
 Select **Desktops** and click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/19.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab5/19.png
 
 Select **Restrict** and click **Add**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/20.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab5/20.png
 
 Specify **SSP Developers** in the **Object names** field and click **OK > Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/ts18/citrix/lab5/21b.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/citrix/lab5/21b.png
 
 Click **Add** and fill out the following fields:
 
@@ -577,15 +577,15 @@ Click **Add** and fill out the following fields:
   - **Maximum desktops per user** - 1
   - Select **Enable desktop assignment rule**
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/23.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab5/23.png
 
 Click **OK > Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/24.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab5/24.png
 
 Specify a friendly name for the Delivery Group and click **Finish**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/25b.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab5/25b.png
 
 Following creation of the pool, observe in **Prism** that 1 of the **W10P-###** VMs been has powered on.
 
@@ -598,19 +598,19 @@ Log in as **NTNXLAB\\devuser01**.
 
 Select the **Desktops** tab and click your **Personal Windows 10 Desktop** to launch the session.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/31.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab5/31.png
 
 .. note:: Depending on your browser you may have to click on the downloaded .ica file if Receiver does not open automatically. You may also be able to instruct the browser to always open .ica files.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/32.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab5/32.png
 
 After the virtual desktop has completed logging in, experiment by changing application settings, installing applications, restarting the VM, and logging in again.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/33.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab5/33.png
 
 In **Citrix Studio**, observe the changes to VM details. As a user logs in they are statically assigned a desktop and another desktop will power on and register with the Delivery Controller, waiting for the next user.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/34.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab5/34.png
 
 Takeaways
 +++++++++++

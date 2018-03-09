@@ -142,7 +142,7 @@ my_log "Importing X-Ray image"
 acli image.create XRay container="${MY_IMG_CONTAINER_NAME}" image_type=kDiskImage source_url=http://10.21.64.50/images/xray.qcow2 wait=true
 
 my_log "Importing HYCU image"
-acli image.create HYCU container="${MY_IMG_CONTAINER_NAME}" image_type=kDiskImage source_url=http://10.21.64.50/images/hycu-2.0.1-2823.qcow2 wait=true
+acli image.create HYCU container="${MY_IMG_CONTAINER_NAME}" image_type=kDiskImage source_url=http://10.21.64.50/images/hycu-2.0.1-90.qcow2 wait=true
 
 my_log "Importing Xtract VM image"
 acli image.create Xtract-VM container="${MY_IMG_CONTAINER_NAME}" image_type=kDiskImage source_url=http://10.21.64.50/images/xtract-vm-1.1.3.qcow2 wait=true

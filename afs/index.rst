@@ -28,11 +28,11 @@ Deploy Acropolis File Services
 
 In **Prism > File Server**, click **+ File Server**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab7/1.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab7/1.png
 
 The AFS 3.0.0 package has been already been uploaded and the Data Services IP has been configured as 10.21.XXX.38. Click **Continue**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab7/7.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab7/7.png
 
 Fill out the following fields and click **Next**:
 
@@ -40,17 +40,17 @@ Fill out the following fields and click **Next**:
   - **Domain** - ntnxlab.local
   - **File Server Size** - 1 TiB
 
-  .. figure:: http://s3.nutanixworkshops.com/ts18/afs/8b.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/afs/8b.png
 
 .. note:: Clicking **Custom Configuration** will allow you to alter the scale up and scale out sizing of the AFS VMs based on User and Throughput targets.
 
 Select the **Primary - Managed** VLAN for the Client Network. Ensure the **DNS Resolver IP** is configured as the IP of your **DC** VM and **NOT** the cluster Name Server IP. Click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/ts18/afs/9c.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/afs/9c.png
 
 Select the **Primary - Managed** VLAN for the Storage Network. Click **Next**.
 
-  .. figure:: http://s3.nutanixworkshops.com/ts18/afs/10b.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/afs/10b.png
 
 .. note::
 
@@ -65,23 +65,23 @@ Fill out the following fields and click **Next**:
   - Select **Use NFS Protocol**
   - **User Management and Authentication** - Unmanaged
 
-  .. figure:: http://s3.nutanixworkshops.com/ts18/afs/11b.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/afs/11b.png
 
 .. note:: Similar to NFSv3, in Unmanaged mode, users are only identified by UID/GID. NFS connections will still require an NFSv4 capable client.
 
 Review the configuration and click **Create**.
 
-  .. figure:: http://s3.nutanixworkshops.com/ts18/afs/12b.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/afs/12b.png
 
 Monitor deployment progress in **Prism > Tasks**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab7/13.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab7/13.png
 
 Upon completion, select the **AFS** server and click **Protect**.
 
 Observe the default Self Service Restore schedules, this feature controls the snapshot schedule for Windows' Previous Versions functionality. Supporting Previous Versions allows end users to roll back changes to files without engaging storage or backup administrators. Note these local snapshots do not protect the file server cluster from local failures and that replication of the entire file server cluster can be performed to remote Nutanix clusters. Click **Close**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab7/16.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab7/16.png
 
 Configuring SMB Home Share
 ++++++++++++++++++++++++++
@@ -92,21 +92,21 @@ In **Prism > File Server**, click **+ Share/Export**. Fill out the following fie
   - **Protocol** - SMB
   - **Share/Export Type** - Home directory and User Profiles
 
-  .. figure:: http://s3.nutanixworkshops.com/ts18/afs/14.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/afs/14.png
 
 Select **Enable Access Based Enumeration** and **Self Service Restore** and click **Create**.
 
-  .. figure:: http://s3.nutanixworkshops.com/ts18/afs/15.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/afs/15.png
 
 In the **XD** VM console, open ``\\AFS.ntnxlab.local`` in **File Explorer**.
 
 Right-click **home > Properties**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab7/19.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab7/19.png
 
 Select the **Security** tab and click **Advanced**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab7/20.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab7/20.png
 
 Select **Users (AFS\\Users)** and click **Remove**.
 
@@ -114,7 +114,7 @@ Click **Add**.
 
 Click **Select a principal** and specify **Everyone** in the **Object Name** field. Click **OK**.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab7/21b.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab7/21b.png
 
 Fill out the following fields and click **OK**:
 
@@ -125,21 +125,21 @@ Fill out the following fields and click **OK**:
   - Select **Read**
   - Select **Write**
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab7/22.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab7/22.png
 
 Click **OK > OK > OK**.
 
-  .. figure:: http://s3.nutanixworkshops.com/ts18/afs/23b.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/afs/23b.png
 
 In the **XD** VM console, open **Control Panel > Administrative Tools > Active Directory Users & Computers**.
 
 Under **ntnxlab.local > Users**, right-click **devuser01 > Properties**.
 
-  .. figure:: http://s3.nutanixworkshops.com/ts18/afs/17.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/afs/17.png
 
 Click **Profile**. Under **Home folder**, select **Connect** and specify ``\\afs.ntnxlab.local\home\%username%`` as the path. Click **OK**. Repeat for the following user accounts: **devuser02**, **devuser03**, **devuser04**.
 
-  .. figure:: http://s3.nutanixworkshops.com/ts18/afs/18.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/afs/18.png
 
 In **Prism > File Server > Share > home**, click **+ Add Quota Policy**. Fill out the following fields and click **Save**:
 
@@ -148,7 +148,7 @@ In **Prism > File Server > Share > home**, click **+ Add Quota Policy**. Fill ou
   - **Quota** - 10 GiB
   - **Enforcement Type** - Hard Limit
 
-  .. figure:: http://s3.nutanixworkshops.com/ts18/afs/20.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/afs/20.png
 
 Open \http://<*XD-VM-IP*>/Citrix/StoreWeb in a browser on the same L3 LAN as your XD VM.
 
@@ -156,17 +156,17 @@ Log in as **NTNXLAB\\devuser01**.
 
 Select the **Desktops** tab and click your **Personal Windows 10 Desktop** to launch the session.
 
-  .. figure:: http://s3.nutanixworkshops.com/vdi_ahv/lab5/31.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/vdi_ahv/lab5/31.png
 
 Open ``Z:\`` in **File Explorer** and create multiple files, with at least one populated text file.
 
-  .. figure:: http://s3.nutanixworkshops.com/ts18/afs/19.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/afs/19.png
 
 Open ``\\afs.ntnxlab.local\home`` and observe your **%username%** directory is the only directory visible. Disable **Access Based Enumeration (ABE)** in **Prism > File Server > Share > home > Update** and try again.
 
 After ~2 hours, validate the presense of **Self Service Restore Snapshots** in **Prism > File Server > Share > home**.
 
-  .. figure:: http://s3.nutanixworkshops.com/ts18/afs/21a.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/afs/21a.png
 
 From **NTNXLAB\\devuser01's Personal Windows 10 Desktop** session, browse to your home directory. Open, modify, and save a text file. Right-click that file and select **Restore previous versions**. Open a previous version of the document corresponding to AFS snapshots and save as a new file.
 
@@ -179,7 +179,7 @@ In **Prism > File Server**, click **+ Share/Export**. Fill out the following fie
   - **Protocol** - NFS
   - **Share/Export Type** - Non-Shared Directories
 
-  .. figure:: http://s3.nutanixworkshops.com/ts18/afs/22.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/afs/22.png
 
 Fill out the following fields and click **Create**:
 
@@ -187,7 +187,7 @@ Fill out the following fields and click **Create**:
   - **Default Access** - No Access
   - **Clients with Read-Write Access** - *Cluster IP Range* (10.21.XX.*)
 
-  .. figure:: http://s3.nutanixworkshops.com/ts18/afs/23.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/afs/23.png
 
 In **Prism > VM**, click **+ Create VM** and fill out the following fields:
 
@@ -197,18 +197,18 @@ In **Prism > VM**, click **+ Create VM** and fill out the following fields:
 - **Number of Cores per vCPU** - 1
 - **Memory** - 4
 
-Click **+ Add New Disk** and fill out the following fields:
+Click **+ Add New Disk**, fill out the following fields, and click **Add**:
 
 - **Type** - DISK
 - **Operation** - Clone from Image Service
 - **Bus Type** - SCSI
 - **Image** - *CentOS Disk Image*
 
-Click **Add**.
+Click **Add New NIC**. fill out the following fields, and click **Add**:
 
-Click **Add New NIC**.
+  - **VLAN Name** - Secondary
 
-Select **Secondary** from the **VLAN Name** drop down menu and click **Add**. Click **Save**.
+Click **Save**.
 
 In **Prism > VM > Table**, select the **NFS-Client** VM and click **Power on**.
 
@@ -226,7 +226,7 @@ Execute the following:
 
 Observe that the **logs** directory is mounted in ``/afsmnt/logs``.
 
-  .. figure:: http://s3.nutanixworkshops.com/ts18/afs/24.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/afs/24.png
 
 Reboot the VM and observe the export is no longer mounted. To persist the mount, add it to ``/etc/fstab`` by executing the following:
 
@@ -242,7 +242,7 @@ The following command will add 2000 2MB files filled with random data to ``/afsm
 
 Return to **Prism > File Server > Share > logs** to monitor performance and usage.
 
-  .. figure:: http://s3.nutanixworkshops.com/ts18/afs/25.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/afs/25.png
 
 Takeaways
 +++++++++
