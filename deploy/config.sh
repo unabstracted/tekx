@@ -348,7 +348,7 @@ MY_DEPLOY_BODY=$(cat <<EOF
               },
               "ip_list":["10.21.${MY_HPOC_NUMBER}.39"]
           }],
-          "dns_server_ip_list":["10.21.253.10"],
+          "dns_server_ip_list":["10.21.${MY_HPOC_NUMBER}.40,10.21.253.10"],
           "container_uuid":"${MY_CONTAINER_UUID}",
           "num_sockets":8,
           "memory_size_bytes":34359738368,
@@ -395,6 +395,14 @@ curl -u admin:${MY_PE_PASSWORD} -k -H 'Content-Type: application/json' -X PUT \
     "isPulsePromptNeeded":false,
     "remindLater":null
 }'
+
+my_log "Patching Calm binaries"
+remote_exec mv /usr/local/nutanix/epsilon/epsilon.tar /usr/local/nutanix/epsilon/epsilon.old
+remote_exec mv /usr/local/nutanix/epsilon/nucalm.tar /usr/local/nutanix/epsilon/nucalm.old
+remote_exec curl -O http://10.21.64.50/images/epsilon.tar
+remote_exec curl -O http://10.21.64.50/images/nucalm.tar
+remote_exec mv -v /home/nutanix/epsilon.tar /usr/local/nutanix/epsilon/
+remote_exec mv -v /home/nutanix/nucalm.tar /usr/local/nutanix/epsilon/
 
 my_log "Removing sshpass"
 sudo rpm -e sshpass
