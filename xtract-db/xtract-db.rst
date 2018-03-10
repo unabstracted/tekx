@@ -192,7 +192,7 @@ After Hypervisor connection is made, click **Configure VMs**.
 
 Fill out the following fields and click **Next**:
 
-- **Name** - MSSQL
+- **Name** - UptickAppDB
 - **Container Name** - Databases
 - **Retain clone of master VM on the Container** - Unselected
 - **Network** - Primary
@@ -216,7 +216,7 @@ Fill out the following fields and click **Next**:
 
 Fill out the following fields and click **Validate and Save**:
 
-- **Domain Name** - ntnxlad.local
+- **Domain Name** - ntnxlab.local
 - **Domain User Name** - administrator@ntnxlab.local
 - **Domain Password** - nutanix/4u
 
