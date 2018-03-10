@@ -38,17 +38,19 @@ Configuring X-Ray VM
 
 In **Prism > VM > Table**, select the **X-Ray** VM and click **Update**.
 
+Click **Set Affinity**. Select all hosts **EXCEPT** *<Cluster Name>-1*. Click **Save**.
+
   .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/xray/0.png
+
+Repeat for **DC** VM.
 
 .. note::
 
-  As X-Ray powers down hosts for tests that evaluate availability and data integrity, it is best practice to run the X-Ray VM outside of the target cluster. Additionally, the X-Ray VM itself creates a small amount of storage and CPU overhead that could potentially skew results. Due to resource constraints, your X-Ray VM is running on the cluster you will be targetting for tests. Tests run as part of this exercise only power off node 1 in the cluster, so the X-Ray VM has been pinned to nodes 2 and 3 to prevent accidentally being powered off.
+  As X-Ray powers down hosts for tests that evaluate availability and data integrity, it is best practice to run the X-Ray VM outside of the target cluster. Additionally, the X-Ray VM itself creates a small amount of storage and CPU overhead that could potentially skew results. Due to resource constraints, your X-Ray VM is running on the cluster you will be targetting for tests. Tests run as part of this exercise only power off the first host in the cluster, so the X-Ray VM has been excluded from running on the first host to prevent accidentally being powered off.
 
   For environments where DHCP is unavailable, X-Ray supports "Zero Configuration" networking, where the VMs communicate via self-assigned link local IPv4 addresses. In order to work, all of the VMs (including the X-Ray VM) need to reside on the same Layer 2 network. To use Zero Configuration networking, your X-Ray VM's first NIC (eth0) should be on a network capable of communicating with your cluster. A second NIC (eth1) is added on a network without DHCP. No action is required as the X-Ray VM has already been created with both NICs, as seen below.
 
   **DO NOT ENABLE IPAM ON THE "Link-Local-DO-NOT-TOUCH" NETWORK!**
-
-Click **Save**.
 
 Open \https://<*XRAY-VM-IP*>/ in a browser. Enter a password for the local secret score, such as your HPOC cluster password, and click **Enter**.
 
@@ -74,16 +76,20 @@ Select **Targets** from the navigation bar and click **+ New Target**. Fill out 
   - **Username** - ADMIN
   - **Password** - ADMIN
   - **Prism Address** - *<Cluster IP>*
-  - **Username** - admin
-  - **Password** - *<admin password>*
+  - **Username** - xray
+  - **Password** - nutanix/4u
 
-  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/xray/5.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/xray/5b.png
+
+.. note::
+
+  The local Prism account **xray** has already been created for you. To function, the Prism service account used for the connection requires the **Cluster Admin** role.
 
 Select **Link-Local-DO-NOT-TOUCH** under **Network** and click **Next**.
 
   .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/xray/6.png
 
-Select **Supermicro** from the **IPMI Type** menu. Review **Node Info** for accuracy and click **Save**.
+Select **Supermicro** from the **IPMI Type** menu. Review **Node Info** and click **Save**.
 
   .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/xray/7.png
 
@@ -99,7 +105,7 @@ Unzip the package and open **test.yml**. Each test is comprised of a YAML file t
   .. literalinclude:: original-test.yml
      :language: yaml
      :lines: 1-5,53-82
-     :emphasize-lines: 19-22
+     :emphasize-lines: 17-22
      :linenos:
      :caption: Extended Node Failure - test.yml
      :name: originial-test.yml
@@ -113,24 +119,24 @@ Open **vdi.fio**. Note the highlighted lines below. As part of the test, 10GB of
      :caption: Extended Node Failure - vdi.fio
      :name: originial-vdi.fio
 
-Due to memory restrictions, your cluster may not be able to support running the full VDI workload. To address this you will install a modified version of the test that will provision 25x 2vCPU/2GB RAM VMs, each with 3x 16GB disks. Each disk will be prefilled with 10GB of data, meaning performance results should be comparable with the original test. Note the highlighted lines below for the key changes to the test. At test runtime, X-Ray will programmatically generate an FIO configuration to fill disks based based on the corresponding workload .fio file.
+Due to memory restrictions, your cluster may not be able to support running the full VDI workload. To address this you will install a modified version of the test that will provision 25x 2vCPU/1GB RAM VMs, each with 1x 16GB disks prefilled with 10GB of data. Note the highlighted lines below for the key changes to the test. At test runtime, X-Ray will programmatically generate an FIO configuration to fill disks based based on the corresponding workload .fio file.
 
   .. literalinclude:: test.yml
      :language: yaml
      :lines: 1-5,55-84
-     :emphasize-lines: 1,3,19-22
+     :emphasize-lines: 1,3,18,22
      :linenos:
      :caption: Extended Node Failure (25 VDI VMs) - test.yml
      :name: test.yml
 
-  .. literalinclude:: vdi.fio
+..  .. literalinclude:: vdi.fio
     :language: ini
     :emphasize-lines: 31-37
     :linenos:
     :caption: Extended Node Failure (25 VDI VMs) - vdi.fio
     :name: vdi.fio
 
-In the navigation bar, click :fa:`cog` **> Add Custom Scenario**. Click **Choose File** and select ``\\hpoc-afs\isos\TS18\XRay-Extended-Node-Failure-25-VDI-VMs.zip``. Click **Save**.
+In the navigation bar, click :fa:`cog` **> Add Custom Scenario**. Click **Choose File** and select ``\\hpoc-afs\iso\TS18\XRay-Extended-Node-Failure-25-VDI-VMs.zip``. Click **Save**.
 
   .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/xray/13.png
 

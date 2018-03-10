@@ -239,6 +239,11 @@ my_log "Create PE user account hycu for HYCU"
 ncli user create user-name=hycu user-password=nutanix/4u first-name=HYCU last-name=Service email-id=no-reply@nutanix.com
 ncli user grant-cluster-admin-role user-name=hycu
 
+# Provision local Prism account for X-Ray
+my_log "Create PE user account hycu for X-Ray"
+ncli user create user-name=hycu user-password=nutanix/4u first-name=X-Ray last-name=Service email-id=no-reply@nutanix.com
+ncli user grant-cluster-admin-role user-name=xray
+
 # Create XD & power on
 my_log "Create XD VM"
 acli vm.create XD num_vcpus=4 num_cores_per_vcpu=1 memory=6G
@@ -348,7 +353,7 @@ MY_DEPLOY_BODY=$(cat <<EOF
               },
               "ip_list":["10.21.${MY_HPOC_NUMBER}.39"]
           }],
-          "dns_server_ip_list":["10.21.${MY_HPOC_NUMBER}.40,10.21.253.10"],
+          "dns_server_ip_list":["10.21.${MY_HPOC_NUMBER}.40"],
           "container_uuid":"${MY_CONTAINER_UUID}",
           "num_sockets":8,
           "memory_size_bytes":34359738368,

@@ -71,7 +71,9 @@ Click **+ New** and fill out the following fields:
 
   .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/hycu/5.png
 
-.. note:: Adding the cluster may take approximately 1 minute.
+.. note::
+
+  The local Prism account **xd** has already been created for you. To function, the Prism service account used for the connection requires the **Cluster Admin** role.
 
 Click **Save**.
 

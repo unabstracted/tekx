@@ -34,8 +34,8 @@ description: |
   <strong>Test Requirements</strong>
   <ul class="indented">
     <li>vCPUs: 54 vCPUs on every node</li>
-    <li>RAM: 54 GB on every node</li>
-    <li>Cluster Storage: 992GB per node</li>
+    <li>RAM: 29GB GB on every node</li>
+    <li>Cluster Storage: 366GB per node</li>
     <li>IP Addresses: 26 per node</li>
   </ul>
   Note: This test scales with the number of nodes.
@@ -64,9 +64,9 @@ vms:
   - VDI:
       template: ubuntu1604
       vcpus: 2
-      ram_mb: 2048
+      ram_mb: 1024
       data_disks:
-        count: 3
+        count: 1
         size: 16
       count_per_node: 25
 

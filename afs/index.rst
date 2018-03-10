@@ -69,6 +69,10 @@ Fill out the following fields and click **Next**:
 
 .. note:: Similar to NFSv3, in Unmanaged mode, users are only identified by UID/GID. NFS connections will still require an NFSv4 capable client.
 
+Click **Next**.
+
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/afs/11c.png
+
 Review the configuration and click **Create**.
 
   .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/afs/12b.png
@@ -177,15 +181,16 @@ In **Prism > File Server**, click **+ Share/Export**. Fill out the following fie
 
   - **Name** - logs
   - **Protocol** - NFS
-  - **Share/Export Type** - Non-Shared Directories
+  - **Usage** - General Purpose
 
-  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/afs/22.png
+  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/afs/22b.png
 
 Fill out the following fields and click **Create**:
 
   - **Authentication** - System
   - **Default Access** - No Access
-  - **Clients with Read-Write Access** - *Cluster IP Range* (10.21.XX.*)
+  - Select **+ Add Client Exceptions**
+  - **Clients with Read-Write Access** - *Cluster IP Range* (ex. 10.21.XX.*)
 
   .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/afs/23.png
 
@@ -206,7 +211,7 @@ Click **+ Add New Disk**, fill out the following fields, and click **Add**:
 
 Click **Add New NIC**. fill out the following fields, and click **Add**:
 
-  - **VLAN Name** - Secondary
+- **VLAN Name** - Secondary
 
 Click **Save**.
 
@@ -218,27 +223,35 @@ Execute the following:
 
   .. code-block:: bash
 
-    yum -y install nfs-utils
-    mkdir /afsmnt
-    mount.nfs4 afs.ntnxlab.local:/ /afsmnt
-    df -kh
-    ls /afsmnt
+    [root@CentOS ~]# mkdir /afsmnt
+    [root@CentOS ~]# mount.nfs4 afs.ntnxlab.local:/ /afsmnt/
+    [root@CentOS ~]# df -kh
+    Filesystem                      Size  Used Avail Use% Mounted on
+    /dev/mapper/centos_centos-root  8.5G  1.7G  6.8G  20% /
+    devtmpfs                        1.9G     0  1.9G   0% /dev
+    tmpfs                           1.9G     0  1.9G   0% /dev/shm
+    tmpfs                           1.9G   17M  1.9G   1% /run
+    tmpfs                           1.9G     0  1.9G   0% /sys/fs/cgroup
+    /dev/sda1                       494M  141M  353M  29% /boot
+    tmpfs                           377M     0  377M   0% /run/user/0
+    afs.ntnxlab.local:/             1.0T  7.0M  1.0T   1% /afsmnt
+    [root@CentOS ~]# ls -l /afsmnt/
+    total 1
+    drwxrwxrwx. 2 root root 2 Mar  9 18:53 logs
 
 Observe that the **logs** directory is mounted in ``/afsmnt/logs``.
-
-  .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/afs/24.png
 
 Reboot the VM and observe the export is no longer mounted. To persist the mount, add it to ``/etc/fstab`` by executing the following:
 
   .. code-block:: bash
 
-    echo 'afs.ntnxlab.local:/ /afsmnt nfs4' >> /etc/fstab
+    echo 'afs.ntnxlab.local:/logs /afsmnt nfs4' >> /etc/fstab
 
-The following command will add 2000 2MB files filled with random data to ``/afsmnt/logs``:
+The following command will add 1000 2MB files filled with random data to ``/afsmnt/logs``:
 
   .. code-block:: bash
 
-    for i in {1..2000}; do dd if=/dev/urandom bs=8k count=256 of=/afsmnt/logs/file$i; done
+    for i in {1..1000}; do dd if=/dev/urandom bs=8k count=256 of=/afsmnt/logs/file$i; done
 
 Return to **Prism > File Server > Share > logs** to monitor performance and usage.
 
