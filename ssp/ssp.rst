@@ -23,7 +23,7 @@ Getting Engaged with the Product Team
 Setup Authentication and Role Mapping in Prism Central
 +++++++++++++++++
 
-In **Prism Central**, click :fa:`cog` **> Authentication**
+In **Prism Central**, click <i class="material-icons">cog</i> **> Authentication**
 
 Click **+ New Directory**
 
