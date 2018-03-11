@@ -59,6 +59,7 @@
             <p>A description of the lavish prizes that will drive people to blood, sweat, and tears to beat out their co-workers.</p>
         </div>
     </div>
+    <hr>
 
 Get Started
 ===========
