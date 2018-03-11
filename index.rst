@@ -1,6 +1,4 @@
 .. title:: Tech Summit 2018
-.. raw:: html
-  :file: jumbotron.html
 
 .. _intro-docs:
 
@@ -47,6 +45,7 @@
   .. jenkins/index
   .. chef/index
   .. puppet/index
+
 .. raw:: html
 
     <div class="jumbotron splash index-jumbotron">
