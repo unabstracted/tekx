@@ -76,7 +76,7 @@ Enter project name, and click **Create New Project**:
 Fill out the following fields and click **Begin Scan**:
 
 - **Scan Name** - Parts DB
-- **HOSTNAME (OR IP ADDRESS)** - *IP of the Windows 2012 Server MS SQL lives on*
+- **HOSTNAME (OR IP ADDRESS)** - *IP of SQLServerTeam-XX*
 - **Instance Name (Or Port)** - 1433
 - **Username** - NTNXLAB\Administrator
 - **Password** - nutanix/4u
@@ -157,6 +157,8 @@ Install Nutanix Guest Tools, and Restart.
 Disable the Windows Firewall Service
 
 Log in and run Windows Update to get the latest updates, and Restart.
+
+Now turn off Windows Update
 
 shutdown the VM.
 
@@ -264,6 +266,7 @@ Click the :fa:`plus-circle` to select **MSSQLSERVER\MSSQLSERVER**, and click **N
 
 If/When it asks you for a File Share add the link to the share on the MSSQL Server, and click **Save and Start the Plan**.
 
+- **Server File Path** - ``\\SQLServerTeam-XX\xdb``
 - **Server File Path Example** - ``\\10.21.64.54\xdb``
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb25.png
