@@ -56,7 +56,7 @@
         </div>
         <div class="col-md-6">
             <h2>Awards and Prizes</h2>
-            <p>In addition to bragging rights there will be prizes for the winning team. In addition, there will be awards for Jira ticket submissions and special contributions.</p>
+            <p>In addition to bragging rights and special recognition at SKO there will be prizes for the winning team. There will be awards for most Jira ticket submissions and special contributions.</p>
         </div>
     </div>
     <hr>
