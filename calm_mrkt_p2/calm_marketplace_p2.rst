@@ -5,7 +5,7 @@ Calm Marketplace Part 2
 
 Overview
 ************
-.. note:: Estimated time to completion: **40mins**
+.. note:: Estimated time to completion: **40MINUTES**
 
 In this lab participants will learn how to manage Blueprints within the NuCalm Marketplace.  After this lab
 participants should know how to navigate Marketplace Management and configure the Project Environment to deploy Blueprints
