@@ -11,10 +11,10 @@ Calm - REST APIs
       ./calm_workshop_postman_setup
       ./calm_workshop_postman_run
 
-
-
 Overview
 ************
+
+.. note:: Estimated time to complete: **2.5hrs**
 
 The Automation Lab starts with an introduction to Calm REST API, and associated JSON. The lab is a set of exercises designed to walk participants through navigating the REST API Explorer, locating Blueprint and Appication REST requests, executing the requests, and observing the results using both the Swagger generated API Explorer (Prism Central) and Postman (optional). Participants will also deploy several commands using python.
 
@@ -25,23 +25,25 @@ NTNX REST API Explorer Requests:
 - Role
 - Project
 
-Estimated time to complete: **2.5hrs**
+Getting Engaged with the Product Team
+=====================================
+- **Slack** - #calm
+- **Product Manager** - Tarak Parekh, tarak.parekh@nutanix.com
+- **Technical Marketing Engineer** - Chris Brown, christopher.brown@nutanix.com
+- **Field Specialists** - Mark Lavi, mark.lavi@nutanix.com; Andy Schmid, andy.schmid@nutanix.com
 
-**Product Feature Reseources**
-
-- slack: #sme_devops
-- PdM: Tarak Parekh
-- Solutions: Andy Schmid
 
 Requirements:
 *************
 
-**Reference:**
+Reference:
+============
 
 - REST/HTTP Overview: REST-HTTP-Overview_
 - NTNX REST API Explorer Overview:  NTNX-REST-API-Explorer-Overview_
 
-**Execution & Development:**
+Execution & Development:
+========================
 
 - Chrome Web Browser + Developer Tools
 - Chrome JSON Editor: Chrome-JSON-Editor-Extension_
