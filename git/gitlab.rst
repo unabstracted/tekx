@@ -6,7 +6,7 @@ Git
 Overview
 *************
 
-.. note:: Estimated time to completion: **90mins**
+.. note:: Estimated time to completion: **90 MINUTES**
 
 Git is a distributed revision control and source code management system with an emphasis on speed. Git was initially designed and developed by Linus Torvalds for Linux kernel development and is a free software distributed under the terms of the GNU General Public License.
 
