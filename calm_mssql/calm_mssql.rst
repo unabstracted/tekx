@@ -7,7 +7,7 @@ Calm Blueprint (MSSQL-2014)
 Overview:
 *********
 
-.. note:: Estimated time to complete: **20mins**
+.. note:: Estimated time to complete: **20 MINUTES**
 
 In this lab participants will walk through importing and deploying an MS Windows Server 2012 R2, and an instance of MS SQL Database - 2014.
 
