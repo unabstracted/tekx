@@ -6,15 +6,19 @@ Calm Blueprint (MSSQL-2014)
 
 Overview:
 *********
+
+.. note:: Estimated time to complete: **20mins**
+
 In this lab participants will walk through importing and deploying an MS Windows Server 2012 R2, and an instance of MS SQL Database - 2014.
 
-Estimated time to complete: **20mins**
 
-**Product Feature Reseources**
-
-- slack: #calm
-- PdM: Jasnoor Gill
-- Solutions: Mark Lavi, Andy Schmid
+Getting Engaged with the Product Team
+=====================================
+- **Slack** - #calm
+- **Product Manager** - Jasnoor Gill, jasnoor.gill@nutanix.com
+- **Product Marketing Manager** - Gil Haberman, gil.haberman@nutanix.com
+- **Technical Marketing Engineer** - Chris Brown, christopher.brown@nutanix.com
+- **Field Specialists** - Mark Lavi, mark.lavi@nutanix.com; Andy Schmid, andy.schmid@nutanix.com
 
 Prerequisites:
 **************
