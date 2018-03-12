@@ -1,3 +1,5 @@
+.. _xtractvm_lab:
+
 -------------------
 Xtract for VMs
 -------------------
@@ -115,7 +117,7 @@ In **Xtract**, click **Create a Migration Plan**.
 
 Enter Migration Plan Name, and click **OK**:
 
-- **Migration Plan Name** - View-Win10-GoldenImage Migration.
+- **Migration Plan Name** - ViewImage-Team-XX Migration.
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm13.png
 
@@ -126,7 +128,7 @@ Enter Migration Plan Name, and click **Next**:
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm14.png
 
-Select **View-Win10-GoldenImage** VM, and click **Next**.
+Select **ViewImage-Team-XX** VM, and click **Next**.
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm15.png
 
@@ -156,7 +158,7 @@ In **Xtract**, click **Migration In Progress**.
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm19.png
 
-Select the box for **View-Win10-GoldenImage**, and click **Cutover**.
+Select the box for **ViewImage-Team-XX**, and click **Cutover**.
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-vm/xtractvm20.png
 
