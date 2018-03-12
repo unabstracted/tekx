@@ -38,7 +38,7 @@ Blueprint:
 
 Download the MSSQL Blueprint by clikcing the link provided below:
 
-:download:`mssql2014.json <./blueprints/mssql2014.json>`
+:download:`mssql2014.json <./blueprints/windowsMSSQL2014.json>`
 
 From Apps (NuCalm) within Prism Central, navigate to the Blueprint Workspace by clicking (|image1|) icon located on the left tool ribbon.  This will open the Blueprint Workspace where self-authored blueprints are staged for editing, publishing, and/or launching as Applications.  When the Blueprint grid appears, click the **Upload Blueprint** button located along the top of the Blueprint grid.
 
