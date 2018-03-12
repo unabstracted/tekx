@@ -6,7 +6,7 @@ Calm Blueprint (MySQL)
 Overview
 ********
 
-.. note:: Estimated time to complete: **40min** 
+.. note:: Estimated time to complete: **40 MINUTES** 
 
 This lab steps a user through a basic MySQL Deployment. In this lab you'll start with a very
 basic, single service that deploys MySQL ona CentOS v7 Server
