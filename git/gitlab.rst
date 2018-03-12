@@ -752,7 +752,7 @@ And finally push it to the branch:
 Takeaways
 **********
 - Learned how to configure a distributed **Git** development environment with repository.
-- Stepped through a common workfolow of creating, adding, and modifying files using **Git** command line operations.
+- Stepped through a common workflow of creating, adding, and modifying files using **Git** command line operations.
 - Successfully managed a central **Git** repository shared across the network...
 - Learned how newly created files are staged prior to persisting within a repository.
 - Observed how to check change-log status and change history...
