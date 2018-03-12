@@ -1,3 +1,5 @@
+.. _xtractdb_lab:
+
 -------------------
 Xtract for Databases
 -------------------
@@ -76,7 +78,7 @@ Enter project name, and click **Create New Project**:
 Fill out the following fields and click **Begin Scan**:
 
 - **Scan Name** - Parts DB
-- **HOSTNAME (OR IP ADDRESS)** - *IP of SQLServerTeam-XX*
+- **HOSTNAME (OR IP ADDRESS)** - *IP of SQLSvrTeam-XX*
 - **Instance Name (Or Port)** - 1433
 - **Username** - NTNXLAB\Administrator
 - **Password** - nutanix/4u
@@ -183,7 +185,7 @@ Ensure you have all the Pre-Requisites, and click **Proceed to Deploy**.
 
  - **IP Address** - 10.21.XX.37
  - **Port** - 9440
- - **Username** - admin
+ - **Username** - xtract
  - **Password** - *Prism Password*
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb14.png
@@ -211,7 +213,7 @@ Select **Enter Account Credentials**
 
 Fill out the following fields and click **Next**:
 
-- **Domain Account Name** - ntnxlab\adminuser01
+- **Domain Account Name** - ``ntnxlab\adminuser01``
 - **Password** - nutanix/4u
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb38.png
@@ -266,8 +268,12 @@ Click the :fa:`plus-circle` to select **MSSQLSERVER\MSSQLSERVER**, and click **N
 
 If/When it asks you for a File Share add the link to the share on the MSSQL Server, and click **Save and Start the Plan**.
 
-- **Server File Path** - ``\\SQLServerTeam-XX\xdb``
+- **Server File Path** - ``\\SQLSvrTeam-XX\xdb``
 - **Server File Path Example** - ``\\10.21.64.54\xdb``
+
+.. Note::
+
+  This setup is for Tech Summit. In production this would normally not be on the same server as the Database.
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb25.png
 
