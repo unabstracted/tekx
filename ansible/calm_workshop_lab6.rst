@@ -13,9 +13,10 @@ Ansible
 Overview
 ************
 
+.. note:: Estimated time to completion: **90mins**
+
 In this lab participants will install, configure, and deploy the Ansible orchestration software stack on CentOS Server v7 VM.  Once Ansible is stable, learners will develop and execute playbooks to deploy a LAMP stack and compare & contrast the differences with NuCalm.  We'll also explore developing running a simple Ansible module to standup infrastructure (i.e. VM creation).
 
-Estimated time to completion: **90mins**
 
 Introduction
 ************
