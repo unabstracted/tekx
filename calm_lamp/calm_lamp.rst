@@ -6,15 +6,21 @@ Calm Blueprint (LAMP)
 Overview
 ************
 
+.. note:: Estimated time to complete: **40 MINUTES**
+  
 In this lab participants will extend the Calm Blueprint (MySQL) basic blueprint to create basic LAMP Stack (Linux Apache MySQL PHP). In this lab we’ll build on the previous MySQL blueprint and extend this to the multi-stack application you see above. 
 
 Estimated time to complete: **50mins**
 
-**Product Feature Resource(s)**
+Product Feature Resource(s)
+===========================
 
-- slack: #calm
-- PdM:  Jasnoor Gill
-- Solutions: Mark Lavi, Andy Schmid
+- **Slack** - #calm
+- **Product Manager** - Jasnoor Gill, jasnoor.gill@nutanix.com
+- **Product Marketing Manager** - Gil Haberman, gil.haberman@nutanix.com
+- **Technical Marketing Engineer** - Chris Brown, christopher.brown@nutanix.com
+- **Field Specialists** - Mark Lavi, mark.lavi@nutanix.com; Andy Schmid, andy.schmid@nutanix.com
+
 
 .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab2/image1.png
 
