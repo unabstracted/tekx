@@ -6,17 +6,21 @@ Calm Marketplace Part 1
 Overview
 ************
 
+.. note:: Estimated time to complete: **50 MINUTES**
+
 In this lab participants will learn how to manage NuCalm Blueprints within the NuCalm Marketplace.  After this lab
 participants should know how to navigate and manage the Marketplace, publish blueprints to the market, deploy and/or clone
 blueprints from the marketplace.
 
-Estimated time to complete: **50mins**
 
-**Product Feature Resource(s)**
+Getting Engaged with the Product Team
+=====================================
+- **Slack** - #calm
+- **Product Manager** - Jasnoor Gill, jasnoor.gill@nutanix.com
+- **Product Marketing Manager** - Gil Haberman, gil.haberman@nutanix.com
+- **Technical Marketing Engineer** - Chris Brown, christopher.brown@nutanix.com
+- **Field Specialists** - Mark Lavi, mark.lavi@nutanix.com; Andy Schmid, andy.schmid@nutanix.com
 
-- slack: #calm
-- PdM:  Jasnoor Gill
-- Solutions: Mark Lavi, Andy Schmid
 
 Calm Glossary
 *************
