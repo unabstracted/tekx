@@ -4,11 +4,12 @@ GitHub
 
 Overview:
 *************
+
+.. note:: Estimated time to completion: **20mins**
+
 GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
 
 This lab teaches you GitHub essentials like repositories, branches, commits, and Pull Requests. You’ll create your own Hello World repository and learn GitHub’s Pull Request workflow, a popular way to create and review code.
-
-Estimated time to complete: **20mins**
 
 No coding necessary
 ===================
