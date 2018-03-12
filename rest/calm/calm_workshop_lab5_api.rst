@@ -14,7 +14,7 @@ Calm - REST APIs
 Overview
 ************
 
-.. note:: Estimated time to complete: **2.5hrs**
+.. note:: Estimated time to complete: **2.5 HOURS**
 
 The Automation Lab starts with an introduction to Calm REST API, and associated JSON. The lab is a set of exercises designed to walk participants through navigating the REST API Explorer, locating Blueprint and Appication REST requests, executing the requests, and observing the results using both the Swagger generated API Explorer (Prism Central) and Postman (optional). Participants will also deploy several commands using python.
 
