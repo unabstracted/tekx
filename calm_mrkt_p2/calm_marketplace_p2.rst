@@ -5,6 +5,7 @@ Calm Marketplace Part 2
 
 Overview
 ************
+.. note:: Estimated time to completion: **40mins**
 
 In this lab participants will learn how to manage Blueprints within the NuCalm Marketplace.  After this lab
 participants should know how to navigate Marketplace Management and configure the Project Environment to deploy Blueprints
@@ -16,13 +17,14 @@ In this exercise we'll walk through the steps to:
 2. Use the Marketplace Manager to approve, assign roles and projects, and publish to the Marketplace.
 3. Edit the Project Environment so the blueprint can be launched from the Marketplace as an application.
 
-Estimated time to completion: **40mins**
 
-**Product Feature Resource(s)**
-
-- slack: #calm
-- PdM:  Jasnoor Gill
-- Solutions: Mark Lavi, Andy Schmid
+Getting Engaged with the Product Team
+=====================================
+- **Slack** - #calm
+- **Product Manager** - Jasnoor Gill, jasnoor.gill@nutanix.com
+- **Product Marketing Manager** - Gil Haberman, gil.haberman@nutanix.com
+- **Technical Marketing Engineer** - Chris Brown, christopher.brown@nutanix.com
+- **Field Specialists** - Mark Lavi, mark.lavi@nutanix.com; Andy Schmid, andy.schmid@nutanix.com
 
 .. note:: This lab assumes pariticipants have Blueprints built and staged from previous exercises.
 
