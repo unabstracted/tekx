@@ -192,11 +192,15 @@ Observe the graphs for **OLTP IOPS VM1**, **VM2**, and **VM3**. Immediately afte
 
 Being able to demonstrate Nutanix's performance and availability.
 
-In the navigation bar, click :fa:`cog` **> Import Test Results**. Click **Choose File** and select ``\\hpoc-afs\isos\TS18\XRay-Results.zip``. Click **Import**.
+In the navigation bar, click :fa:`cog` **> Import Test Results**. Click **Choose File** and select ``\\hpoc-afs\iso\TS18\XRay-Results.zip``. Click **Import**.
 
   .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/xray/18.png
 
-.. note:: The data you are importing is VSAN 6.6 sample data. VMware's EULA prevents individuals from distributing or publishing performance data without their consent. This data should only be used for this exercise - it is not to be shared with customers, partners, media, etc.
+.. note::
+
+  The data you are importing is VSAN 6.6 sample data.
+
+  **VMware's EULA prevents individuals from distributing or publishing performance data without their consent. This data should only be used for this exercise - it is not to be shared with customers, partners, media, etc.**
 
 Click **Analyses** in the navigation bar and click **Create Analysis** in the lower left-hand panel. Select **Sample: NX-3060** and **HCLVSAN-6.6** and click **Create**.
 

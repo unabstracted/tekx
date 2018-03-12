@@ -377,46 +377,120 @@ Log in to the VM as **Administrator** and validate the files have been restored 
 ..  Performing Application Aware Backup And Restore
   +++++++++++++++++++++++++++++++++++++++++++++++
 
-  Objective: Perform auto discovery of a SQL Server database and perform a backup & restore.
+  .. note::
 
-  Prerequisites: SQL Server with a single SQL instance, Credentials for VM access, and Credentials for SQL database access (sysadmin permission).
+    This portion of lab should be completed **AFTER** the :ref:`xtractdb_lab` lab.
 
-   .. Note ::HYCU will be able to auto discover applications running inside a VM, and offer application level backup / restore. With this application awareness capability, you can now focus on protecting your applications. Follow the below steps in order to perform an application aware backup / restore.
+    Ensure NGT is Enabled on your migrated **UptickAppDB** VM by mounting Nutanix Guest Tools and restarting the **Nutanix Guest Tools Agent** service within the VM.
 
-  1. Select Virtual Machines in the main left menu.
+  From **HYCU > Virtual Machines**, select **UptickAppDB**. Select **Credentials > + New**.
 
-  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/hycu/images/image30.png
+  Fill out the following fields and click **Save**:
 
-  2. Click on Credentials on the right-hand side.
+    - **Name** - NTNXLAB Administrator Credentials
+    - **Username** - NTNXLAB\\Administrator
+    - **Password** - nutanix/4u
 
-  3. Create new credential group, make sure to use credentials with VM & APP access.
+    .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/hycu/43.png
 
-  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/hycu/images/image31.png
+  Click **Assign**.
 
-  4. Find the VM with SQL server running on it.
+    .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/hycu/44.png
 
-  5. Highlight it with a left mouse click, then click on Credentials.
+  Click **Synchronize** and validate the **Discovery** column in green for **UptickAppDB**.
 
-  6. Assign the proper credentials to that VM. The discovery process will then start automatically.
+  Select **Applications** from the sidebar, select **UptickAppDB\\MSSQLSERVER**, and click **Policies**. Select **Gold** and click **Assign**.
 
-  7. Once discovery has completed click on Applications in the main left side menu.
+    .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/hycu/45.png
 
-  8. Assign your desired Policy to the discovered SQL application, and the backup process will start within 5 minutes.
+  Select **Jobs** from the sidebar and monitor the backup progress for **UptickAppDB**.
 
-  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/hycu/images/image32.png
+    .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/hycu/46.png
 
-  9. Start another backup manually by clicking on the Backup on top, and notice it is an incremental backup.
+  .. note::
 
-  10. On the same screen, when you click on the application, you will see all of the application Restore Point's that are   	 	 available.
+    The job may finish with a warning status due to some databases on the **UptickAppDB** VM being configured with the **Simple Recovery Model** and not supporting transaction log backup. This warning can be ignored. You can view the detailed output of any warnings or errors by selecting a Job and clicking **Report**.
 
-  11. You can select any of these restore point's and select the “Restore” icon to perform a granular recovery of the database.
+  Select **Applications** from the sidebar, select **UptickAppDB\\MSSQLSERVER**, and click **Backup > Yes**.
 
-  12. Select either individual database, multiple databases, or full SQL instance.
+    .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/hycu/47.png
 
-  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/hycu/images/image33.png
+  Wait for the incremental backup to complete successfully.
+
+    .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/hycu/48.png
+
+  In **Prism > VM > Table**, select the **HYCU** VM and click **Launch Console**.
+
+  Download **SQL Server Management Studio 17.5** from https://10.21.64.50/images/SSMS-Setup-ENU.exe.
+
+  Launch **SSMS-Setup-ENU.exe** and click **Install**. Upon completion, click **Restart**.
+
+  Launch **SQL Server Management Studio 17.5** and click **Connect**.
+
+    .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/hycu/49.png
+
+  Select **UPTICKAPPDB > Databases > Uptick > Tables > dbo.Make**, right-click **dbo.Make** and select **Delete > OK**.
+
+    .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/hycu/50.png
+
+  From **HYCU > Applications**, select **UptickAppDB\\MSSQLSERVER**. Select the most recent Restore Point (prior to deleting the database table) and click **Restore**.
+
+    .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/hycu/51.png
+
+  Select **Restore application items** and click **Next**.
+
+    .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/hycu/52.png
+
+  Select **Uptick** and click **Restore**.
+
+    .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/hycu/53.png
+
+  Select **Jobs** from the sidebar and monitor the restore progress for **UptickAppDB\\MSSQLSERVER**.
+
+    .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/hycu/24.png
 
 
-  13. Notice that HYCU will offer Restore capabilities to a particular point in time for Databases which are configured in full recovery mode.
+
+    Objective: Perform auto discovery of a SQL Server database and perform a backup & restore.
+
+    Prerequisites: SQL Server with a single SQL instance, Credentials for VM access, and Credentials for SQL database access (sysadmin permission).
+
+     .. Note ::HYCU will be able to auto discover applications running inside a VM, and offer application level backup / restore. With this application awareness capability, you can now focus on protecting your applications. Follow the below steps in order to perform an application aware backup / restore.
+
+    1. Select Virtual Machines in the main left menu.
+
+    .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/hycu/images/image30.png
+
+    2. Click on Credentials on the right-hand side.
+
+    3. Create new credential group, make sure to use credentials with VM & APP access.
+
+    .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/hycu/images/image31.png
+
+    4. Find the VM with SQL server running on it.
+
+    5. Highlight it with a left mouse click, then click on Credentials.
+
+    6. Assign the proper credentials to that VM. The discovery process will then start automatically.
+
+    7. Once discovery has completed click on Applications in the main left side menu.
+
+    8. Assign your desired Policy to the discovered SQL application, and the backup process will start within 5 minutes.
+
+    .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/hycu/images/image32.png
+
+    9. Start another backup manually by clicking on the Backup on top, and notice it is an incremental backup.
+
+    10. On the same screen, when you click on the application, you will see all of the application Restore Point's that are   	 	 available.
+
+    11. You can select any of these restore point's and select the “Restore” icon to perform a granular recovery of the database.
+
+    12. Select either individual database, multiple databases, or full SQL instance.
+
+    .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/hycu/images/image33.png
+
+
+    13. Notice that HYCU will offer Restore capabilities to a particular point in time for Databases which are configured in full recovery mode.
 
 Takeaways
 +++++++++
