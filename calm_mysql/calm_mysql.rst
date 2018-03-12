@@ -6,16 +6,19 @@ Calm Blueprint (MySQL)
 Overview
 ********
 
+.. note:: Estimated time to complete: **40min** 
+
 This lab steps a user through a basic MySQL Deployment. In this lab you'll start with a very
 basic, single service that deploys MySQL ona CentOS v7 Server
 
-Estimated time to complete: **40min** 
 
-**Product Feature Resources**
-
-- slack: #calm
-- PdM: Jasnoor Gill
-- Solutions: Mark Lavi, Andy Schmid
+Getting Engaged with the Product Team
+=====================================
+- **Slack** - #calm
+- **Product Manager** - Jasnoor Gill, jasnoor.gill@nutanix.com
+- **Product Marketing Manager** - Gil Haberman, gil.haberman@nutanix.com
+- **Technical Marketing Engineer** - Chris Brown, christopher.brown@nutanix.com
+- **Field Specialists** - Mark Lavi, mark.lavi@nutanix.com; Andy Schmid, andy.schmid@nutanix.com
 
 
 Calm Glossary
