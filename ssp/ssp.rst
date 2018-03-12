@@ -210,6 +210,8 @@ Fill out the following fields and click **Save**:
 
 Under **Network** check the appropriate network, and make it default.
 
+.. Note:: Select both **Primary** and **Secondary**
+
 Confirm everything is filled out, and click **Save**
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp12.png
@@ -338,7 +340,7 @@ Fill out the following fields and click **Save**:
 - **Name** - Calm VM 001
 - **Target Project** - Calm
 - **Disks** - Select **Boot From**
-- **Network** - Select **Primary**
+- **Network** - Select **Secondary**
 - **Advance Settings** - Check **Manually Configure CPU & Memory**
 - **CPU** - 1 VCPU
 - **Memory** - 2 GB
@@ -356,6 +358,27 @@ You should see both **Developer VM 001** & **Calm VM 001**. That is because **SS
 Click on **Projects**, and you will see the resource usage of **Developer VM 001** against the **Developer** project quota.
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp27.png
+
+Configure App Management
++++++++++++++++++
+
+In **Prism Central**, click :fa:`cog` **> Enable App Management**
+
+Check the box for **Enable App Management**
+
+Verify the box is checked for **Enable Nutanix Seeded Blueprints**
+
+Click **Save**
+
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/ssp30.png
+
+Monitor Recent Tasks, and watch for the "Volume Group", "Volume Disk", and "Batch Configure" Tasks to complete
+
+Click on the **Apps** Tab in the Top Navigation Ribbon
+
+If you see the Calm UI you are done
+
+.. Note:: You should see the projects you created in the **SSP** Module
 
 Takeaways
 +++++++++++
