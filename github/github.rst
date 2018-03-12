@@ -5,7 +5,7 @@ GitHub
 Overview:
 *************
 
-.. note:: Estimated time to completion: **20mins**
+.. note:: Estimated time to completion: **20 MINUTES**
 
 GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
 
