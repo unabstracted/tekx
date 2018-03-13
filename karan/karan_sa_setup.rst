@@ -43,6 +43,7 @@ The steps for deploying Karan are as follows.
  
 - Download the karan-installer_ . The link referenced is correct as at January 2018.
 - Deploy a Windows virtual machine running Windows 2012 R2.
+- Add the Karan VM to the domain, for this lab we will use ntnxlab.local
 - Enable PowerShell remote execution on the Karan Windows VM:
  
 .. code-block:: bash
@@ -96,7 +97,7 @@ The steps for deploying Karan are as follows.
 .. code-block:: bash
  
     > services.msc
- 
+
 Configuring Windows target VMs
 ============================== 
 For Karan to have access to the Windows target/client VMs, the following commands must be run. In most cases, these commands would be run as part of preparing a Windows image for use with Sysprep.
@@ -105,6 +106,21 @@ For Karan to have access to the Windows target/client VMs, the following command
  
     > enable-psremoting
     > set-executionpolicy remotesigned
+    
+For MSSQL to work with Karan you will need to also make the below changes.
+
+1. From the Start menu, point to Administrative Tools, and then click Local Security Policy.
+
+2. In the Local Security Settings dialog box, double-click Local Policies, and then double-click User Rights Assignment.
+
+3. In the details pane, double-click Adjust memory quotas for a process. This is the SE_INCREASE_QUOTA_NAME user right.
+
+4. Click Add User or Group, and, in the Enter the object names to select box, type the user or group name to which you want to assign the user right, and then click OK.
+
+5. Click OK again, and then, in the details pane, double-click Replace a process level token. This is the SE_ASSIGNPRIMARYTOKEN_NAME user right.
+
+6. Click Add User or Group, and, in the Enter the object names to select box, type the user or group name to which you want to assign the user right, and then click OK.
+  
  
 Using Karan
 ===========
