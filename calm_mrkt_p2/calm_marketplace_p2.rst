@@ -161,12 +161,12 @@ Takeaways
 
 
 .. |image0| image:: lab8/media/image2.png
-.. |image1| image:: https://s3.amazonaws.com/s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab8/image14.png
+.. |image1| image:: https://s3.amazonaws.com/s3.nutanixworkshops.com/s3.nutanixworkshops.com/calm/lab8/image14.png
 .. |image2| image:: lab8/media/image17.png
 .. |image3| image:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab8/image16.png
 .. |image4| image:: lab8/media/image15.png
 .. |image5| image:: lab8/media/image18.png
-.. |image6| image:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab8/image10.png
+.. |image6| image:: https://s3.amazonaws.com/s3.nutanixworkshops.com/s3.nutanixworkshops.com/calm/lab8/image10.png
 .. |image20| image:: lab8/media/image11.png
 .. |image7| image:: lab8/media/image19.png
 .. |image8| image:: lab8/media/image20.png
@@ -174,7 +174,7 @@ Takeaways
 .. |image10| image:: lab8/media/image22.png
 .. |image11| image:: lab8/media/image23.png
 .. |image12| image:: lab8/media/image24.png
-.. |image13| image:: http://s3.nutanixworkshops.com/calm/lab8/image25.png
+.. |image13| image:: https://s3.amazonaws.com/s3.nutanixworkshops.com/s3.nutanixworkshops.com/calm/lab8/image25.png
 .. |image14| image:: lab8/media/image26.png
 .. |image15| image:: lab8/media/image27.png
 .. |image16| image:: lab8/media/image28.png
