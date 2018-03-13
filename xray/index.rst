@@ -136,7 +136,7 @@ Due to memory restrictions, your cluster may not be able to support running the 
     :caption: Extended Node Failure (25 VDI VMs) - vdi.fio
     :name: vdi.fio
 
-In the navigation bar, click :fa:`cog` **> Add Custom Scenario**. Click **Choose File** and select ``\\hpoc-afs\iso\TS18\XRay-Extended-Node-Failure-25-VDI-VMs.zip``. Click **Save**.
+In the navigation bar, click :fa:`cog` **> Add Custom Scenario**. Click **Choose File** and select ``\\10.21.249.41\iso\TS18\XRay-Extended-Node-Failure-25-VDI-VMs.zip``. Click **Save**.
 
   .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/xray/13.png
 
@@ -192,7 +192,7 @@ Observe the graphs for **OLTP IOPS VM1**, **VM2**, and **VM3**. Immediately afte
 
 Being able to demonstrate Nutanix's performance and availability.
 
-In the navigation bar, click :fa:`cog` **> Import Test Results**. Click **Choose File** and select ``\\hpoc-afs\iso\TS18\XRay-Results.zip``. Click **Import**.
+In the navigation bar, click :fa:`cog` **> Import Test Results**. Click **Choose File** and select ``\\10.21.249.41\iso\TS18\XRay-Results.zip``. Click **Import**.
 
   .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/ts18/xray/18.png
 
