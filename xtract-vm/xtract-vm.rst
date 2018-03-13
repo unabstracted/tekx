@@ -175,8 +175,8 @@ After it is completed you can view it in Prism
 Takeaways
 +++++++++++
 
-- Nutanix provides tools for migrating VMs off of existing VMware ESXi environments onto AHV.
+- Xtract for VMs simplifies bulk migration of existing VMs to Nutanix, eliminating the friction associated with onboarding new IT infrastructure.
 
-- There are different ways to setup **Xtract for VMs**, so you have choice.
+- Businesses can quickly leverage the full potential of Nutanix Enterprise Cloud with near-zero VM downtime during the migration from vSphere ESXi to Nutanix AHV.
 
-- Mirating VMs is done in a very easy Nutanix way.
+- Xtract features the ability to migrate all AHV certified OSes, scheduling data-seeding and migrations, multi-cluster migration management, and grouping/sorting VMs.
