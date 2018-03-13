@@ -80,7 +80,7 @@ Fill out the following fields and click **Begin Scan**:
 - **Scan Name** - Parts DB
 - **HOSTNAME (OR IP ADDRESS)** - *IP of SQLSvrTeam-XX*
 - **Instance Name (Or Port)** - 1433
-- **Username** - NTNXLAB\Administrator
+- **Username** - ``NTNXLAB\Administrator``
 - **Password** - nutanix/4u
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb05.png
