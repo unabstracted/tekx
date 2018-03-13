@@ -108,6 +108,8 @@ Once the blueprint has been successfully updated and saved, click the (|image5|)
 
 .. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab3/image6.png
 
+.. note:: Please note that an XML script to auto join the MSSQL VM to the domain is included in this lab. This would usually be an additional step for deployment.
+
 
 Click **Create** to launch the application.
 
