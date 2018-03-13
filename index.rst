@@ -74,6 +74,10 @@ Beginning on Wednesday you will be provided with a customer challenge. Your goal
 
 Each team has been provided a four node cluster running AHV and AOS 5.5.1. **Upon Electing a Team Lead and Consulting Your Team Coach Please Exam Your Cluster.** Each cluster has been pre-staged with the following:
 
+
+**Credentials**
+-**Cluster Username:** admin **Password:** techX2018!
+
 **Networks**
 
 - **Network information is located on your team spreadsheet** - https://drive.google.com/drive/folders/1-8vVrC7Ad9uFeWnY1LcaffQQEoD-Eris
