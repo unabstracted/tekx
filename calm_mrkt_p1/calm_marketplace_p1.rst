@@ -75,7 +75,7 @@ Marketplace - Clone Blueprint
 
 Navigate to the Marketplace by clicking (|image5|) icon located on the left tool ribbon.  This will open the Marketplace. Once Marketplace is displayed, the **Mongo** Blueprint icon should be visible...
 
-.. figure:: http://s3.nutanixworkshops.com/calm/lab4/image11.png
+.. figure:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab4/image11.png
 
 
 Click the **Mongo** Blueprint Icon and then click **Clone** to copy the bluerpint to the Blueprint workspace for editing.
