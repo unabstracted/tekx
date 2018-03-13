@@ -174,7 +174,7 @@ Takeaways
 .. |image10| image:: lab8/media/image22.png
 .. |image11| image:: lab8/media/image23.png
 .. |image12| image:: lab8/media/image24.png
-.. |image13| image:: https://s3.amazonaws.com/s3.nutanixworkshops.com/s3.nutanixworkshops.com/calm/lab8/image25.png
+.. |image13| image:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab8/image25.png
 .. |image14| image:: lab8/media/image26.png
 .. |image15| image:: lab8/media/image27.png
 .. |image16| image:: lab8/media/image28.png
