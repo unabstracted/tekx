@@ -111,7 +111,7 @@ Takeaways
 .. |image5| image:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab4/image10.png
 .. |image6| image:: lab4/media/image11.png
 .. |image7| image:: lab4/media/image13.png
-.. |image8| image:: lab4/media/image14.png
+.. |image8| image:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab4/image14.png
 .. |image9| image:: lab4/media/image15.png
 .. |image10| image:: lab4/media/image16.png
 .. |image11| image:: lab4/media/image17.png
