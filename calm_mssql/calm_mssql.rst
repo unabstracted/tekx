@@ -118,7 +118,7 @@ Takeaways
 
 
 
-.. _karan-setup: ../karan/karan_setup.html
+.. _karan-setup: ../karan/karan_sa_setup.html
 
 .. |image1| image:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab3/image1.png
 .. |image5| image:: https://s3.amazonaws.com/s3.nutanixworkshops.com/calm/lab3/image5.png
