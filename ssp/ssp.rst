@@ -247,7 +247,7 @@ Now lets add some images to a **Catalog**, click on **Images**
 
 Select the box for **Windows2012**, and click **Add Image to Catalog** from the **Actions** dropdown
 
-  .. figure:: http://s3.nutanixtechsummit.com/ssp/ssp16.png
+  .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/ssp/sp16.png
 
 Fill out the following fields and click **Save**:
 
