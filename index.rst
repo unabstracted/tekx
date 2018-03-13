@@ -76,7 +76,7 @@ Each team has been provided a four node cluster running AHV and AOS 5.5.1. **Upo
 
 
 **Credentials**
--**Cluster Username:** admin **Password:** techX2018!
+- **Cluster Username:** admin **Password:** techX2018!
 
 **Networks**
 
