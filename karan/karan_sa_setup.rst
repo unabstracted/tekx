@@ -84,14 +84,22 @@ The steps for deploying Karan are as follows.
 - Click Next
 - Specify the account information (for demo environments, the Karan VM’s local administrator account is OK)
 - Complete the wizard until Karan is installed
+- Once karan has successfully installed, you'll need to insure that the PC VM firewall can communicate through port 8090.  We'll accomplish as follows:
+
+.. code-block::  bash
+
+  > ssh nutanix@10.21.xx.39
+  > password nutanix/4u
+  > /usr/local/nutanix/cluster/bin/modify_firewall -o open -i eth0 -p 8090 -a -f
+  
 - After installation, start the Karan service from the Windows Services application:
  
 .. code-block:: bash
  
     > services.msc
- 
-**Configuring Windows target VMs**
- 
+
+Configuring Windows target VMs
+============================== 
 For Karan to have access to the Windows target/client VMs, the following commands must be run. In most cases, these commands would be run as part of preparing a Windows image for use with Sysprep.
  
 .. code-block:: bash

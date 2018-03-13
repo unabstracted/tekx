@@ -319,9 +319,13 @@ When everything is done, you will see status of **Completed**.
 
   .. figure:: https://s3.us-east-2.amazonaws.com/s3.nutanixtechsummit.com/xtract-db/xtractdb35.png
 
-Conclusions
+Takeaways
 +++++++++++
 
-- Nutanix provides tools for migrating databases
+- Xtract facilitates the migration of existing database instances to a Nutanix Enterprise Cloud.
 
-- Mirating databases is done in a very easy Nutanix way
+- Databases are transformed at the application level, where Xtract discovers all instances in an infrastructure, understands their configuration and performance characteristics, and applies Nutanix best practices to their design template for migration to the target.
+
+- This approach enables businesses to migrate from any source platform (virtual, physical and public cloud) with ease, optimizing the database servers in the process and extracting maximum value from the Nutanix investment.
+
+- Xtract eliminates human error and data inconsistency in migrations
