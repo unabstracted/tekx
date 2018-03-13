@@ -15,7 +15,6 @@
   calm_mrkt_p1/calm_marketplace_p1
   calm_mrkt_p2/calm_marketplace_p2
   calm_mssql/calm_mssql
-  git/gitlab
   github/github
   xtract-vm/xtract-vm
   xtract-db/xtract-db
@@ -29,6 +28,7 @@
 
   afs/index
   citrix/index
+  git/gitlab
   hycu/index
   docker/calm_workshop_lab7_docker
   .. k8s/index
