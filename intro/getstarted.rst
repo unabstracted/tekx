@@ -4,7 +4,7 @@
 Get Started
 ===========
 
-Following presentations on Tuesday, you will have approximately 5 hours to complete the **Required Labs**.
+The Hackathon will start fisrt thing on Tuesday morning.  Hackathon in-person registration will start at 0700 and end by 0800.  Please be on time and ready to have fun.  Following presentations on Tuesday, you will have approximately 5 hours to complete the **Required Labs**.
 
 Beginning on Wednesday you will be provided with a customer challenge. Your goal is to build and propose a solution using Nutanix and optional 3rd party technologies. The **Optional Labs** provide step by step guides for additional technologies you may find useful for your proposed solution. Bonus points can be earned by incorporating additional technologies (Chef, Puppet, Jenkins, etc.) not covered in **Optional Labs**.
 
